@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200622 15:40:57.917" generator="Robot 3.1.2 (Python 2.7.17 on darwin)">
+<suite source="/Users/galenchen/Documents/GitHub/RobotFramework_Example/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01" id="s1" name="TestSuite01">
+<suite source="/Users/galenchen/Documents/GitHub/RobotFramework_Example/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test01.robot" id="s1-s1" name="Test01">
+<test id="s1-s1-t1" name="Open Browser Nav to SSense and Search for Shirt">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200622 15:40:58.151" starttime="20200622 15:40:58.150"></status>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<arguments>
+<arg>Debug</arg>
+</arguments>
+<msg timestamp="20200622 15:40:58.151" level="INFO">Log level changed from INFO to DEBUG.</msg>
+<status status="PASS" endtime="20200622 15:40:58.151" starttime="20200622 15:40:58.151"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200622 15:40:58.151" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<msg timestamp="20200622 15:40:59.175" level="DEBUG">POST http://127.0.0.1:60011/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20200622 15:40:59.176" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:00.284" level="DEBUG">http://127.0.0.1:60011 "POST /session HTTP/1.1" 200 845</msg>
+<msg timestamp="20200622 15:41:00.285" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:00.285" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/timeouts/async_script {"sessionId": "441680b5988437712edd5f9a6f7d10f4", "ms": 30000.0}</msg>
+<msg timestamp="20200622 15:41:00.286" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/timeouts/async_script HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:00.286" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:00.286" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/timeouts/implicit_wait {"sessionId": "441680b5988437712edd5f9a6f7d10f4", "ms": 0.0}</msg>
+<msg timestamp="20200622 15:41:00.287" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/timeouts/implicit_wait HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:00.287" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:00.287" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/url {"url": "about:blank", "sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
+<msg timestamp="20200622 15:41:00.307" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/url HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:00.307" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:00.307" level="DEBUG">Opened browser with session id 441680b5988437712edd5f9a6f7d10f4</msg>
+<status status="PASS" endtime="20200622 15:41:00.307" starttime="20200622 15:40:58.151"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:00.308" starttime="20200622 15:40:58.150"></status>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<arguments>
+<arg>Debug</arg>
+</arguments>
+<msg timestamp="20200622 15:41:00.309" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200622 15:41:00.309" starttime="20200622 15:41:00.308"></status>
+</kw>
+<kw name="Set Window Size" library="Selenium2Library">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>1250</arg>
+<arg>930</arg>
+</arguments>
+<msg timestamp="20200622 15:41:00.309" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/window/current/size {"width": 1250, "windowHandle": "current", "sessionId": "441680b5988437712edd5f9a6f7d10f4", "height": 930}</msg>
+<msg timestamp="20200622 15:41:00.417" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/window/current/size HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:00.417" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:00.418" starttime="20200622 15:41:00.309"></status>
+</kw>
+<kw name="Navigate to Landing Page" library="GetStarted">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20200622 15:41:00.419" level="INFO">Opening url 'https://www.ssense.com/en-cn'</msg>
+<msg timestamp="20200622 15:41:00.419" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/url {"url": "https://www.ssense.com/en-cn", "sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200622 15:41:02.435" level="DEBUG">GET http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/screenshot {"sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
+<msg timestamp="20200622 15:41:02.435" level="DEBUG">Starting new HTTP connection (2): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.436" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4/screenshot'): Retry(total=2, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20200622 15:41:02.436" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107cdaf90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
+<msg timestamp="20200622 15:41:02.436" level="DEBUG">Starting new HTTP connection (3): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.437" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4/screenshot'): Retry(total=1, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20200622 15:41:02.437" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16190&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
+<msg timestamp="20200622 15:41:02.437" level="DEBUG">Starting new HTTP connection (4): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.438" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4/screenshot'): Retry(total=0, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20200622 15:41:02.438" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16390&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
+<msg timestamp="20200622 15:41:02.439" level="DEBUG">Starting new HTTP connection (5): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.445" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60011): Max retries exceeded with url: /session/441680b5988437712edd5f9a6f7d10f4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16510&gt;: Failed to establish a new connection: [Errno 61] Connection refused',))</msg>
+<msg timestamp="20200622 15:41:02.446" level="DEBUG">Traceback (most recent call last):
+  File "&lt;decorator-gen-147&gt;", line 2, in capture_page_screenshot
+  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/keywordgroup.py", line 15, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/_screenshot.py", line 91, in capture_page_screenshot
+    if not self._current_browser().get_screenshot_as_file(path):
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/webdrivermonkeypatches.py", line 11, in execute
+    result = self._base_execute(driver_command, params)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 68, in request
+    **urlopen_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 89, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/poolmanager.py", line 323, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 667, in urlopen
+    **response_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))</msg>
+<status status="FAIL" endtime="20200622 15:41:02.446" starttime="20200622 15:41:02.432"></status>
+</kw>
+<msg timestamp="20200622 15:41:02.448" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60011): Max retries exceeded with url: /session/441680b5988437712edd5f9a6f7d10f4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16510&gt;: Failed to establish a new connection: [Errno 61] Connection refused',))</msg>
+<msg timestamp="20200622 15:41:02.453" level="FAIL">ProtocolError: ('Connection aborted.', BadStatusLine('No status line received - the server has closed the connection',))</msg>
+<msg timestamp="20200622 15:41:02.453" level="DEBUG">Traceback (most recent call last):
+  File "&lt;decorator-gen-36&gt;", line 2, in go_to
+  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/keywordgroup.py", line 15, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/_browsermanagement.py", line 412, in go_to
+    self._current_browser().get(url)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/webdrivermonkeypatches.py", line 11, in execute
+    result = self._base_execute(driver_command, params)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 72, in request
+    **urlopen_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 150, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/poolmanager.py", line 323, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 377, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+  File "/usr/local/Cellar/python@2/2.7.17_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1148, in getresponse
+    response.begin()
+  File "/usr/local/Cellar/python@2/2.7.17_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 448, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/Cellar/python@2/2.7.17_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 412, in _read_status
+    raise BadStatusLine("No status line received - the server has closed the connection")</msg>
+<status status="FAIL" endtime="20200622 15:41:02.453" starttime="20200622 15:41:00.418"></status>
+</kw>
+<status status="FAIL" endtime="20200622 15:41:02.454" starttime="20200622 15:41:00.418"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20200622 15:41:02.455" level="DEBUG">Closing browser with session id 441680b5988437712edd5f9a6f7d10f4</msg>
+<msg timestamp="20200622 15:41:02.455" level="DEBUG">DELETE http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4 {"sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
+<msg timestamp="20200622 15:41:02.455" level="DEBUG">Starting new HTTP connection (6): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.456" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4'): Retry(total=2, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20200622 15:41:02.456" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88a90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
+<msg timestamp="20200622 15:41:02.456" level="DEBUG">Starting new HTTP connection (7): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.456" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4'): Retry(total=1, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20200622 15:41:02.457" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88cd0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
+<msg timestamp="20200622 15:41:02.457" level="DEBUG">Starting new HTTP connection (8): 127.0.0.1:60011</msg>
+<msg timestamp="20200622 15:41:02.458" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4'): Retry(total=0, connect=None, read=None, redirect=None, status=None)</msg>
+<msg timestamp="20200622 15:41:02.458" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88ed0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
+<msg timestamp="20200622 15:41:02.459" level="DEBUG">Starting new HTTP connection (9): 127.0.0.1:60011</msg>
+<status status="PASS" endtime="20200622 15:41:02.477" starttime="20200622 15:41:02.454"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:02.477" starttime="20200622 15:41:02.454"></status>
+</kw>
+<status status="FAIL" endtime="20200622 15:41:02.477" critical="yes" starttime="20200622 15:40:58.149">ProtocolError: ('Connection aborted.', BadStatusLine('No status line received - the server has closed the connection',))</status>
+</test>
+<status status="FAIL" endtime="20200622 15:41:02.479" starttime="20200622 15:40:57.943"></status>
+</suite>
+<suite source="/Users/galenchen/Documents/GitHub/RobotFramework_Example/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test02.robot" id="s1-s2" name="Test02">
+<test id="s1-s2-t1" name="Open Browser and nav to GTV and search site for 郭">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200622 15:41:02.489" starttime="20200622 15:41:02.488"></status>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<arguments>
+<arg>Debug</arg>
+</arguments>
+<msg timestamp="20200622 15:41:02.489" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200622 15:41:02.489" starttime="20200622 15:41:02.489"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200622 15:41:02.490" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<msg timestamp="20200622 15:41:03.506" level="DEBUG">POST http://127.0.0.1:60086/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20200622 15:41:03.507" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:60086</msg>
+<msg timestamp="20200622 15:41:04.642" level="DEBUG">http://127.0.0.1:60086 "POST /session HTTP/1.1" 200 845</msg>
+<msg timestamp="20200622 15:41:04.642" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:04.642" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/timeouts/async_script {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "ms": 30000.0}</msg>
+<msg timestamp="20200622 15:41:04.643" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/timeouts/async_script HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:04.643" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:04.643" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/timeouts/implicit_wait {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "ms": 0.0}</msg>
+<msg timestamp="20200622 15:41:04.644" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/timeouts/implicit_wait HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:04.644" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:04.644" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/url {"url": "about:blank", "sessionId": "6f63a14d87420568cb712e5efa9f1605"}</msg>
+<msg timestamp="20200622 15:41:04.771" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/url HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:04.771" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:04.771" level="DEBUG">Opened browser with session id 6f63a14d87420568cb712e5efa9f1605</msg>
+<status status="PASS" endtime="20200622 15:41:04.772" starttime="20200622 15:41:02.490"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:04.772" starttime="20200622 15:41:02.488"></status>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<arguments>
+<arg>Debug</arg>
+</arguments>
+<msg timestamp="20200622 15:41:04.773" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200622 15:41:04.773" starttime="20200622 15:41:04.773"></status>
+</kw>
+<kw name="Set Window Size" library="Selenium2Library">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>1250</arg>
+<arg>930</arg>
+</arguments>
+<msg timestamp="20200622 15:41:04.774" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/window/current/size {"width": 1250, "windowHandle": "current", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "height": 930}</msg>
+<msg timestamp="20200622 15:41:04.882" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/window/current/size HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:04.883" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:04.883" starttime="20200622 15:41:04.773"></status>
+</kw>
+<kw name="Navigate to Landing Page" library="GetStarted">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20200622 15:41:04.884" level="INFO">Opening url 'https://web.gtv.org'</msg>
+<msg timestamp="20200622 15:41:04.884" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/url {"url": "https://web.gtv.org", "sessionId": "6f63a14d87420568cb712e5efa9f1605"}</msg>
+<msg timestamp="20200622 15:41:05.597" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/url HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:05.598" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:05.598" starttime="20200622 15:41:04.884"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:05.598" starttime="20200622 15:41:04.883"></status>
+</kw>
+<kw name="Click When Available" library="Common">
+<arguments>
+<arg>id=search-input</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200622 15:41:05.600" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
+<msg timestamp="20200622 15:41:05.613" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
+<msg timestamp="20200622 15:41:05.613" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:05.819" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
+<msg timestamp="20200622 15:41:06.884" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:06.884" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:06.884" level="DEBUG">GET http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/attribute/disabled {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "name": "disabled", "id": "0.5850021968321626-1"}</msg>
+<msg timestamp="20200622 15:41:07.054" level="DEBUG">http://127.0.0.1:60086 "GET /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/attribute/disabled HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:07.055" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:07.055" starttime="20200622 15:41:05.600"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+</arguments>
+<msg timestamp="20200622 15:41:07.056" level="INFO">Clicking element 'id=search-input'.</msg>
+<msg timestamp="20200622 15:41:07.056" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
+<msg timestamp="20200622 15:41:07.162" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:07.162" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.162" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/click {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-1"}</msg>
+<msg timestamp="20200622 15:41:07.242" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/click HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:07.242" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:07.243" starttime="20200622 15:41:07.055"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:07.243" starttime="20200622 15:41:05.599"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=search-input</arg>
+<arg>郭</arg>
+</arguments>
+<msg timestamp="20200622 15:41:07.244" level="INFO">Typing text '郭' into text field 'id=search-input'</msg>
+<msg timestamp="20200622 15:41:07.244" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
+<msg timestamp="20200622 15:41:07.251" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:07.252" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.252" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/clear {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-1"}</msg>
+<msg timestamp="20200622 15:41:07.287" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/clear HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:07.287" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.288" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/value {"text": "\u90ed", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-1", "value": ["\u90ed"]}</msg>
+<msg timestamp="20200622 15:41:07.398" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/value HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:07.399" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:07.399" starttime="20200622 15:41:07.243"></status>
+</kw>
+<kw name="Click When Available" library="Common">
+<arguments>
+<arg>css=.search-btn</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200622 15:41:07.402" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".search-btn"}</msg>
+<msg timestamp="20200622 15:41:07.419" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:07.419" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.419" level="DEBUG">GET http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/attribute/disabled {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "name": "disabled", "id": "0.5850021968321626-2"}</msg>
+<msg timestamp="20200622 15:41:07.424" level="DEBUG">http://127.0.0.1:60086 "GET /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/attribute/disabled HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:07.424" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:07.424" starttime="20200622 15:41:07.401"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+</arguments>
+<msg timestamp="20200622 15:41:07.425" level="INFO">Clicking element 'css=.search-btn'.</msg>
+<msg timestamp="20200622 15:41:07.425" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".search-btn"}</msg>
+<msg timestamp="20200622 15:41:07.429" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:07.429" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.430" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/click {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-2"}</msg>
+<msg timestamp="20200622 15:41:07.527" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/click HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:07.528" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:07.528" starttime="20200622 15:41:07.424"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:07.528" starttime="20200622 15:41:07.399"></status>
+</kw>
+<kw name="Click When Available" library="Common">
+<arguments>
+<arg>css=.swiper-slide-active .headpicimg</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200622 15:41:07.529" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:07.544" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
+<msg timestamp="20200622 15:41:07.544" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.748" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:07.754" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
+<msg timestamp="20200622 15:41:07.755" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:07.960" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:07.965" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
+<msg timestamp="20200622 15:41:07.966" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:08.170" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:08.175" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
+<msg timestamp="20200622 15:41:08.176" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:08.380" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:08.387" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
+<msg timestamp="20200622 15:41:08.387" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:08.591" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:08.597" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:08.598" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:08.598" level="DEBUG">GET http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/attribute/disabled {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "name": "disabled", "id": "0.5850021968321626-3"}</msg>
+<msg timestamp="20200622 15:41:08.608" level="DEBUG">http://127.0.0.1:60086 "GET /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/attribute/disabled HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:08.608" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:08.609" starttime="20200622 15:41:07.529"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+</arguments>
+<msg timestamp="20200622 15:41:08.609" level="INFO">Clicking element 'css=.swiper-slide-active .headpicimg'.</msg>
+<msg timestamp="20200622 15:41:08.610" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 15:41:08.619" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
+<msg timestamp="20200622 15:41:08.620" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 15:41:08.620" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/click {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-3"}</msg>
+<msg timestamp="20200622 15:41:08.769" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/click HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:08.769" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:08.770" starttime="20200622 15:41:08.609"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:08.770" starttime="20200622 15:41:07.528"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200622 15:41:13.771" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20200622 15:41:13.772" starttime="20200622 15:41:08.771"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20200622 15:41:13.773" level="DEBUG">Closing browser with session id 6f63a14d87420568cb712e5efa9f1605</msg>
+<msg timestamp="20200622 15:41:13.773" level="DEBUG">DELETE http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605 {"sessionId": "6f63a14d87420568cb712e5efa9f1605"}</msg>
+<msg timestamp="20200622 15:41:13.830" level="DEBUG">http://127.0.0.1:60086 "DELETE /session/6f63a14d87420568cb712e5efa9f1605 HTTP/1.1" 200 72</msg>
+<msg timestamp="20200622 15:41:13.831" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 15:41:13.916" starttime="20200622 15:41:13.772"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:13.917" starttime="20200622 15:41:13.772"></status>
+</kw>
+<status status="PASS" endtime="20200622 15:41:13.917" critical="yes" starttime="20200622 15:41:02.487"></status>
+</test>
+<status status="PASS" endtime="20200622 15:41:13.918" starttime="20200622 15:41:02.481"></status>
+</suite>
+<status status="FAIL" endtime="20200622 15:41:13.922" starttime="20200622 15:40:57.919"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="TestSuite01" pass="1">TestSuite01</stat>
+<stat fail="1" id="s1-s1" name="Test01" pass="0">TestSuite01.Test01</stat>
+<stat fail="0" id="s1-s2" name="Test02" pass="1">TestSuite01.Test02</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200622 15:41:02.436" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107cdaf90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
+<msg timestamp="20200622 15:41:02.437" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16190&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
+<msg timestamp="20200622 15:41:02.438" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16390&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
+<msg timestamp="20200622 15:41:02.448" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60011): Max retries exceeded with url: /session/441680b5988437712edd5f9a6f7d10f4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16510&gt;: Failed to establish a new connection: [Errno 61] Connection refused',))</msg>
+<msg timestamp="20200622 15:41:02.456" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88a90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
+<msg timestamp="20200622 15:41:02.457" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88cd0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
+<msg timestamp="20200622 15:41:02.458" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88ed0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
+</errors>
+</robot>
