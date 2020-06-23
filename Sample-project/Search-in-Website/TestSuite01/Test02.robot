@@ -14,7 +14,12 @@ ${BROWSER} =  chrome
 &{USER}  Email=fakeaccount@gtv.info  Password=password
 
 *** Keywords ***
-
+Search in site and go to the first find
+    [Arguments]  ${keyword}
+    Common.Click When Available  id=search-input
+    Input Text  id=search-input  ${keyword}
+    Common.Click When Available  css=.search-btn
+    Common.Click When Available  css=.swiper-slide-active .headpicimg
 
 *** Test Cases ***
 Open Browser and nav to GTV and search site for 郭
@@ -22,8 +27,7 @@ Open Browser and nav to GTV and search site for 郭
     Set Window Size 	1250 	930
 
     GetStarted.Navigate to Landing Page
-    Common.Click When Available  id=search-input
-    Input Text  id=search-input  郭
-    Common.Click When Available  css=.search-btn
-    Common.Click When Available  css=.swiper-slide-active .headpicimg
-    sleep  5s
+
+    Search in site and go to the first find  郭
+
+    sleep  3s
