@@ -23,7 +23,12 @@ Search for product
     Common.Click When Available  xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a
     sleep  1s
     Input Text  id=search-form-input  ${product}
-    Selenium2Library.Press Key  xpath=//input[@id='search-form-input']  RETURN
+    Selenium2Library.Press Key  xpath=//input[@id='search-form-input']  \\13
+
+Verify Seeing Search result
+    [Arguments]  ${search}
+    sleep  3s
+    Element Should Contain  xpath=//*[@id="wrap"]/div/div[1]/section/div[1]/div[1]  ${search}
 
 *** Test Cases ***
 Open Browser Nav to SSense and Search for Shirt
@@ -36,4 +41,5 @@ Open Browser Nav to SSense and Search for Shirt
 
     Search for product  shirt
 
-    sleep  3s
+    Verify Seeing Search result  shirt
+

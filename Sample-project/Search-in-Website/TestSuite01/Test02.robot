@@ -21,6 +21,11 @@ Search in site and go to the first find
     Common.Click When Available  css=.search-btn
     Common.Click When Available  css=.swiper-slide-active .headpicimg
 
+Verify Seeing Search result
+    [Arguments]  ${search}
+    sleep  2s
+    Element Should Contain  xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/span[2]  ${search}
+
 *** Test Cases ***
 Open Browser and nav to GTV and search site for 郭
     set log level  Debug
@@ -30,4 +35,6 @@ Open Browser and nav to GTV and search site for 郭
 
     Search in site and go to the first find  郭
 
-    sleep  3s
+    Verify Seeing Search result  郭文贵MILES
+
+    sleep  1s

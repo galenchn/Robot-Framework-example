@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20200623 00:35:09.245" generator="Robot 3.2.1 (Python 2.7.16 on darwin)">
+<robot rpa="false" generated="20200623 08:52:49.247" generator="Robot 3.2.1 (Python 2.7.16 on darwin)">
 <suite source="/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01" id="s1" name="TestSuite01">
 <suite source="/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test01.robot" id="s1-s1" name="Test01">
 <test id="s1-s1-t1" name="Open Browser Nav to SSense and Search for Shirt">
@@ -9,15 +9,15 @@
 <arguments>
 <arg>30 seconds</arg>
 </arguments>
-<status status="PASS" endtime="20200623 00:35:09.394" starttime="20200623 00:35:09.394"></status>
+<status status="PASS" endtime="20200623 08:52:49.397" starttime="20200623 08:52:49.397"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200623 00:35:09.394" level="INFO">Log level changed from INFO to DEBUG.</msg>
-<status status="PASS" endtime="20200623 00:35:09.394" starttime="20200623 00:35:09.394"></status>
+<msg timestamp="20200623 08:52:49.398" level="INFO">Log level changed from INFO to DEBUG.</msg>
+<status status="PASS" endtime="20200623 08:52:49.398" starttime="20200623 08:52:49.397"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
@@ -25,8 +25,8 @@
 <arg>${testsRootFolder}</arg>
 <arg>/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</arg>
 </arguments>
-<msg timestamp="20200623 00:35:09.395" level="INFO">${testsRootFolder} = /Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</msg>
-<status status="PASS" endtime="20200623 00:35:09.395" starttime="20200623 00:35:09.394"></status>
+<msg timestamp="20200623 08:52:49.399" level="INFO">${testsRootFolder} = /Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</msg>
+<status status="PASS" endtime="20200623 08:52:49.399" starttime="20200623 08:52:49.398"></status>
 </kw>
 <kw name="Create Webdriver" library="Selenium2Library">
 <doc>Creates an instance of Selenium WebDriver.</doc>
@@ -34,34 +34,34 @@
 <arg>Chrome</arg>
 <arg>executable_path=${testsRootFolder}${/}chromedriver</arg>
 </arguments>
-<msg timestamp="20200623 00:35:09.396" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<msg timestamp="20200623 00:35:10.416" level="DEBUG">POST http://127.0.0.1:54942/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
-<msg timestamp="20200623 00:35:10.417" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:54942</msg>
-<msg timestamp="20200623 00:35:11.312" level="DEBUG">http://127.0.0.1:54942 "POST /session HTTP/1.1" 200 727</msg>
-<msg timestamp="20200623 00:35:11.313" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:11.314" level="DEBUG">Created Chrome WebDriver instance with session id c238f52c4045080da911d7baf9526f5b.</msg>
-<status status="PASS" endtime="20200623 00:35:11.314" starttime="20200623 00:35:09.395"></status>
+<msg timestamp="20200623 08:52:49.400" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20200623 08:52:50.416" level="DEBUG">POST http://127.0.0.1:61125/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20200623 08:52:50.416" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:61125</msg>
+<msg timestamp="20200623 08:52:51.228" level="DEBUG">http://127.0.0.1:61125 "POST /session HTTP/1.1" 200 727</msg>
+<msg timestamp="20200623 08:52:51.228" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:51.229" level="DEBUG">Created Chrome WebDriver instance with session id fc60203ce589fae9d50737333b4f10db.</msg>
+<status status="PASS" endtime="20200623 08:52:51.229" starttime="20200623 08:52:49.399"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
 </arguments>
-<msg timestamp="20200623 00:35:11.315" level="INFO">Opening url 'about:blank'</msg>
-<msg timestamp="20200623 00:35:11.315" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/url {"url": "about:blank"}</msg>
-<msg timestamp="20200623 00:35:11.345" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:11.346" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:11.346" starttime="20200623 00:35:11.314"></status>
+<msg timestamp="20200623 08:52:51.230" level="INFO">Opening url 'about:blank'</msg>
+<msg timestamp="20200623 08:52:51.230" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/url {"url": "about:blank"}</msg>
+<msg timestamp="20200623 08:52:51.250" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:51.250" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:51.251" starttime="20200623 08:52:51.229"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:11.346" starttime="20200623 00:35:09.393"></status>
+<status status="PASS" endtime="20200623 08:52:51.251" starttime="20200623 08:52:49.397"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200623 00:35:11.348" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
-<status status="PASS" endtime="20200623 00:35:11.348" starttime="20200623 00:35:11.347"></status>
+<msg timestamp="20200623 08:52:51.252" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200623 08:52:51.252" starttime="20200623 08:52:51.251"></status>
 </kw>
 <kw name="Set Window Size" library="Selenium2Library">
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
@@ -69,10 +69,10 @@
 <arg>1250</arg>
 <arg>930</arg>
 </arguments>
-<msg timestamp="20200623 00:35:11.348" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/window/rect {"y": null, "x": null, "width": 1250, "height": 930}</msg>
-<msg timestamp="20200623 00:35:11.467" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/window/rect HTTP/1.1" 200 51</msg>
-<msg timestamp="20200623 00:35:11.467" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:11.467" starttime="20200623 00:35:11.348"></status>
+<msg timestamp="20200623 08:52:51.253" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/window/rect {"y": null, "x": null, "width": 1250, "height": 930}</msg>
+<msg timestamp="20200623 08:52:51.368" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/window/rect HTTP/1.1" 200 51</msg>
+<msg timestamp="20200623 08:52:51.368" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:51.368" starttime="20200623 08:52:51.252"></status>
 </kw>
 <kw name="Navigate to Landing Page" library="GetStarted">
 <kw name="Go To" library="Selenium2Library">
@@ -80,21 +80,22 @@
 <arguments>
 <arg>${URL.${ENVIRONMENT}}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:11.468" level="INFO">Opening url 'https://www.ssense.com/en-cn'</msg>
-<msg timestamp="20200623 00:35:11.468" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/url {"url": "https://www.ssense.com/en-cn"}</msg>
-<msg timestamp="20200623 00:35:12.877" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:12.877" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:12.878" starttime="20200623 00:35:11.468"></status>
+<msg timestamp="20200623 08:52:51.370" level="INFO">Opening url 'https://www.ssense.com/en-cn'</msg>
+<msg timestamp="20200623 08:52:51.370" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/url {"url": "https://www.ssense.com/en-cn"}</msg>
+<msg timestamp="20200623 08:52:52.672" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:52.673" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:52.673" starttime="20200623 08:52:51.369"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:12.878" starttime="20200623 00:35:11.468"></status>
+<status status="PASS" endtime="20200623 08:52:52.673" starttime="20200623 08:52:51.369"></status>
 </kw>
+<kw name="Remove cookie alert bar">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:13.881" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200623 00:35:13.881" starttime="20200623 00:35:12.878"></status>
+<msg timestamp="20200623 08:52:53.675" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200623 08:52:53.675" starttime="20200623 08:52:52.674"></status>
 </kw>
 <kw name="Click When Available" library="Common">
 <arguments>
@@ -106,41 +107,39 @@
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:13.883" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div[1]/i"}</msg>
-<msg timestamp="20200623 00:35:13.903" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:13.903" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:13.903" level="DEBUG">GET http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/element/9bbd77b8-d900-4558-a6d1-5b78e2449542/enabled {"id": "9bbd77b8-d900-4558-a6d1-5b78e2449542"}</msg>
-<msg timestamp="20200623 00:35:13.911" level="DEBUG">http://127.0.0.1:54942 "GET /session/c238f52c4045080da911d7baf9526f5b/element/9bbd77b8-d900-4558-a6d1-5b78e2449542/enabled HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:13.911" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:13.911" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "9bbd77b8-d900-4558-a6d1-5b78e2449542", "ELEMENT": "9bbd77b8-d900-4558-a6d1-5b78e2449542"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
-<msg timestamp="20200623 00:35:13.918" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/execute/sync HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:13.919" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:13.919" starttime="20200623 00:35:13.882"></status>
+<msg timestamp="20200623 08:52:53.676" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div[1]/i"}</msg>
+<msg timestamp="20200623 08:52:53.694" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:53.695" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:53.695" level="DEBUG">GET http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/5442b8f7-1d48-4eb8-8004-9eee74fbed8f/enabled {"id": "5442b8f7-1d48-4eb8-8004-9eee74fbed8f"}</msg>
+<msg timestamp="20200623 08:52:53.701" level="DEBUG">http://127.0.0.1:61125 "GET /session/fc60203ce589fae9d50737333b4f10db/element/5442b8f7-1d48-4eb8-8004-9eee74fbed8f/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:53.701" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:53.702" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "5442b8f7-1d48-4eb8-8004-9eee74fbed8f", "ELEMENT": "5442b8f7-1d48-4eb8-8004-9eee74fbed8f"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200623 08:52:53.707" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:53.708" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:53.708" starttime="20200623 08:52:53.676"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:13.919" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/header/div[1]/i'.</msg>
-<msg timestamp="20200623 00:35:13.919" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div[1]/i"}</msg>
-<msg timestamp="20200623 00:35:13.925" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:13.925" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:13.925" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/element/9bbd77b8-d900-4558-a6d1-5b78e2449542/click {"id": "9bbd77b8-d900-4558-a6d1-5b78e2449542"}</msg>
-<msg timestamp="20200623 00:35:13.970" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/element/9bbd77b8-d900-4558-a6d1-5b78e2449542/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:13.970" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:13.970" starttime="20200623 00:35:13.919"></status>
+<msg timestamp="20200623 08:52:53.708" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/header/div[1]/i'.</msg>
+<msg timestamp="20200623 08:52:53.708" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div[1]/i"}</msg>
+<msg timestamp="20200623 08:52:53.713" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:53.714" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:53.714" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/5442b8f7-1d48-4eb8-8004-9eee74fbed8f/click {"id": "5442b8f7-1d48-4eb8-8004-9eee74fbed8f"}</msg>
+<msg timestamp="20200623 08:52:53.765" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/element/5442b8f7-1d48-4eb8-8004-9eee74fbed8f/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:53.765" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:53.765" starttime="20200623 08:52:53.708"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:13.970" starttime="20200623 00:35:13.882"></status>
+<status status="PASS" endtime="20200623 08:52:53.765" starttime="20200623 08:52:53.675"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" endtime="20200623 08:52:53.765" starttime="20200623 08:52:52.674"></status>
+</kw>
+<kw name="Search for product">
 <arguments>
-<arg>1s</arg>
+<arg>shirt</arg>
 </arguments>
-<msg timestamp="20200623 00:35:14.971" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200623 00:35:14.972" starttime="20200623 00:35:13.970"></status>
-</kw>
 <kw name="Click When Available" library="Common">
 <arguments>
 <arg>xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a</arg>
@@ -151,101 +150,119 @@
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:14.974" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a"}</msg>
-<msg timestamp="20200623 00:35:14.985" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:14.986" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:14.986" level="DEBUG">GET http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/element/264fc474-ddbf-4a99-b46b-f10b07f7da40/enabled {"id": "264fc474-ddbf-4a99-b46b-f10b07f7da40"}</msg>
-<msg timestamp="20200623 00:35:14.994" level="DEBUG">http://127.0.0.1:54942 "GET /session/c238f52c4045080da911d7baf9526f5b/element/264fc474-ddbf-4a99-b46b-f10b07f7da40/enabled HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:14.994" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:14.994" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "264fc474-ddbf-4a99-b46b-f10b07f7da40", "ELEMENT": "264fc474-ddbf-4a99-b46b-f10b07f7da40"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
-<msg timestamp="20200623 00:35:15.000" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/execute/sync HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:15.001" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:15.001" starttime="20200623 00:35:14.973"></status>
+<msg timestamp="20200623 08:52:53.767" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a"}</msg>
+<msg timestamp="20200623 08:52:53.777" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:53.777" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:53.778" level="DEBUG">GET http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/32d1e844-4115-452c-a76c-e00b87d77dd8/enabled {"id": "32d1e844-4115-452c-a76c-e00b87d77dd8"}</msg>
+<msg timestamp="20200623 08:52:53.784" level="DEBUG">http://127.0.0.1:61125 "GET /session/fc60203ce589fae9d50737333b4f10db/element/32d1e844-4115-452c-a76c-e00b87d77dd8/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:53.785" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:53.785" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "32d1e844-4115-452c-a76c-e00b87d77dd8", "ELEMENT": "32d1e844-4115-452c-a76c-e00b87d77dd8"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200623 08:52:53.791" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:53.791" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:53.791" starttime="20200623 08:52:53.766"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:15.001" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a'.</msg>
-<msg timestamp="20200623 00:35:15.001" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a"}</msg>
-<msg timestamp="20200623 00:35:15.007" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:15.007" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:15.007" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/element/264fc474-ddbf-4a99-b46b-f10b07f7da40/click {"id": "264fc474-ddbf-4a99-b46b-f10b07f7da40"}</msg>
-<msg timestamp="20200623 00:35:15.116" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/element/264fc474-ddbf-4a99-b46b-f10b07f7da40/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:15.116" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:15.116" starttime="20200623 00:35:15.001"></status>
+<msg timestamp="20200623 08:52:53.792" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a'.</msg>
+<msg timestamp="20200623 08:52:53.792" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a"}</msg>
+<msg timestamp="20200623 08:52:53.797" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:53.797" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:53.797" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/32d1e844-4115-452c-a76c-e00b87d77dd8/click {"id": "32d1e844-4115-452c-a76c-e00b87d77dd8"}</msg>
+<msg timestamp="20200623 08:52:53.923" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/element/32d1e844-4115-452c-a76c-e00b87d77dd8/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:53.923" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:53.924" starttime="20200623 08:52:53.791"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:15.116" starttime="20200623 00:35:14.972"></status>
+<status status="PASS" endtime="20200623 08:52:53.924" starttime="20200623 08:52:53.766"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:16.118" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200623 00:35:16.118" starttime="20200623 00:35:15.116"></status>
+<msg timestamp="20200623 08:52:54.924" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200623 08:52:54.925" starttime="20200623 08:52:53.924"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id=search-form-input</arg>
-<arg>shirt</arg>
+<arg>${product}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:16.119" level="INFO">Typing text 'shirt' into text field 'id=search-form-input'.</msg>
-<msg timestamp="20200623 00:35:16.119" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/elements {"using": "css selector", "value": "[id=\"search-form-input\"]"}</msg>
-<msg timestamp="20200623 00:35:16.130" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:16.131" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:16.131" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/element/dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a/clear {"id": "dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a"}</msg>
-<msg timestamp="20200623 00:35:16.159" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/element/dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a/clear HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:16.160" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:16.160" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/element/dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a/value {"text": "shirt", "id": "dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a", "value": ["s", "h", "i", "r", "t"]}</msg>
-<msg timestamp="20200623 00:35:16.230" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/element/dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a/value HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:16.230" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:16.230" starttime="20200623 00:35:16.119"></status>
+<msg timestamp="20200623 08:52:54.925" level="INFO">Typing text 'shirt' into text field 'id=search-form-input'.</msg>
+<msg timestamp="20200623 08:52:54.926" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "css selector", "value": "[id=\"search-form-input\"]"}</msg>
+<msg timestamp="20200623 08:52:54.936" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:54.936" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:54.937" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707/clear {"id": "2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707"}</msg>
+<msg timestamp="20200623 08:52:54.965" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/element/2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:54.966" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:54.966" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707/value {"text": "shirt", "id": "2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707", "value": ["s", "h", "i", "r", "t"]}</msg>
+<msg timestamp="20200623 08:52:55.039" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/element/2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:55.039" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:55.039" starttime="20200623 08:52:54.925"></status>
 </kw>
-<kw name="Press Keys" library="Selenium2Library">
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<kw name="Press Key" library="Selenium2Library">
+<doc>*DEPRECATED in Selenium2Library 4.0.* use `Press Keys` instead.</doc>
 <arguments>
 <arg>xpath=//input[@id='search-form-input']</arg>
-<arg>RETURN</arg>
+<arg>\\13</arg>
 </arguments>
-<msg timestamp="20200623 00:35:16.231" level="INFO">Sending key(s) (u'RETURN',) to xpath=//input[@id='search-form-input'] element.</msg>
-<msg timestamp="20200623 00:35:16.231" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/elements {"using": "xpath", "value": "//input[@id='search-form-input']"}</msg>
-<msg timestamp="20200623 00:35:16.240" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:16.240" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:16.241" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 250, "x": 0, "type": "pointerMove", "y": 0, "origin": {"element-6066-11e4-a52e-4f735466cecf": "dc4fc785-8f6d-4e95-8ebb-8f8a7ba15d6a"}}, {"duration": 0, "button": 0, "type": "pointerDown"}, {"duration": 0, "button": 0, "type": "pointerUp"}]}, {"type": "key", "id": "key", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}]}</msg>
-<msg timestamp="20200623 00:35:16.515" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/actions HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:16.515" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:16.516" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20200623 00:35:16.516" level="INFO">Releasing special key RETURN.</msg>
-<msg timestamp="20200623 00:35:16.516" level="DEBUG">POST http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}, {"type": "key", "id": "key", "actions": [{"type": "keyDown", "value": "\ue006"}, {"type": "keyUp", "value": "\ue006"}, {"type": "keyUp", "value": "\ue006"}]}]}</msg>
-<msg timestamp="20200623 00:35:16.554" level="DEBUG">http://127.0.0.1:54942 "POST /session/c238f52c4045080da911d7baf9526f5b/actions HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:16.554" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:16.554" starttime="20200623 00:35:16.230"></status>
+<msg timestamp="20200623 08:52:55.040" level="WARN">Keyword 'Selenium2Library.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20200623 08:52:55.040" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "xpath", "value": "//input[@id='search-form-input']"}</msg>
+<msg timestamp="20200623 08:52:55.049" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:55.049" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:55.050" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707/value {"text": "\ue007", "id": "2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707", "value": ["\ue007"]}</msg>
+<msg timestamp="20200623 08:52:55.109" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/element/2cf1e5d9-e5b2-4ff4-8dc7-8523eb41b707/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:55.109" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:55.109" starttime="20200623 08:52:55.040"></status>
 </kw>
+<status status="PASS" endtime="20200623 08:52:55.109" starttime="20200623 08:52:53.766"></status>
+</kw>
+<kw name="Verify Seeing Search result">
+<arguments>
+<arg>shirt</arg>
+</arguments>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:19.556" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20200623 00:35:19.556" starttime="20200623 00:35:16.554"></status>
+<msg timestamp="20200623 08:52:58.111" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20200623 08:52:58.111" starttime="20200623 08:52:55.110"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=//*[@id="wrap"]/div/div[1]/section/div[1]/div[1]</arg>
+<arg>${search}</arg>
+</arguments>
+<msg timestamp="20200623 08:52:58.112" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/elements {"using": "xpath", "value": "//*[@id=\"wrap\"]/div/div[1]/section/div[1]/div[1]"}</msg>
+<msg timestamp="20200623 08:52:58.123" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:52:58.124" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:58.124" level="DEBUG">GET http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/element/134c2257-18c1-4f28-817f-b9843e31377d/text {"id": "134c2257-18c1-4f28-817f-b9843e31377d"}</msg>
+<msg timestamp="20200623 08:52:58.135" level="DEBUG">http://127.0.0.1:61125 "GET /session/fc60203ce589fae9d50737333b4f10db/element/134c2257-18c1-4f28-817f-b9843e31377d/text HTTP/1.1" 200 41</msg>
+<msg timestamp="20200623 08:52:58.136" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:58.136" level="INFO">Element 'xpath=//*[@id="wrap"]/div/div[1]/section/div[1]/div[1]' contains text 'shirt'.</msg>
+<status status="PASS" endtime="20200623 08:52:58.136" starttime="20200623 08:52:58.111"></status>
+</kw>
+<status status="PASS" endtime="20200623 08:52:58.136" starttime="20200623 08:52:55.109"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20200623 00:35:19.558" level="DEBUG">Closing browser with session id c238f52c4045080da911d7baf9526f5b.</msg>
-<msg timestamp="20200623 00:35:19.558" level="DEBUG">DELETE http://127.0.0.1:54942/session/c238f52c4045080da911d7baf9526f5b {}</msg>
-<msg timestamp="20200623 00:35:19.626" level="DEBUG">http://127.0.0.1:54942 "DELETE /session/c238f52c4045080da911d7baf9526f5b HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:19.626" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:19.666" starttime="20200623 00:35:19.558"></status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Close Browser</arg>
+</arguments>
+<msg timestamp="20200623 08:52:58.137" level="INFO">Close Browser</msg>
+<status status="PASS" endtime="20200623 08:52:58.137" starttime="20200623 08:52:58.137"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:19.667" starttime="20200623 00:35:19.557"></status>
+<status status="PASS" endtime="20200623 08:52:58.138" starttime="20200623 08:52:58.136"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:19.667" critical="yes" starttime="20200623 00:35:09.392"></status>
+<status status="PASS" endtime="20200623 08:52:58.138" critical="yes" starttime="20200623 08:52:49.396"></status>
 </test>
-<status status="PASS" endtime="20200623 00:35:19.669" starttime="20200623 00:35:09.266"></status>
+<status status="PASS" endtime="20200623 08:52:58.139" starttime="20200623 08:52:49.268"></status>
 </suite>
 <suite source="/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test02.robot" id="s1-s2" name="Test02">
 <test id="s1-s2-t1" name="Open Browser and nav to GTV and search site for 郭">
@@ -255,15 +272,18 @@
 <arguments>
 <arg>30 seconds</arg>
 </arguments>
-<status status="PASS" endtime="20200623 00:35:19.683" starttime="20200623 00:35:19.682"></status>
+<msg timestamp="20200623 08:52:58.147" level="DEBUG">POST http://127.0.0.1:61125/session/fc60203ce589fae9d50737333b4f10db/timeouts {"script": 30000}</msg>
+<msg timestamp="20200623 08:52:58.148" level="DEBUG">http://127.0.0.1:61125 "POST /session/fc60203ce589fae9d50737333b4f10db/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:52:58.148" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:52:58.148" starttime="20200623 08:52:58.147"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200623 00:35:19.683" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
-<status status="PASS" endtime="20200623 00:35:19.683" starttime="20200623 00:35:19.683"></status>
+<msg timestamp="20200623 08:52:58.149" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200623 08:52:58.149" starttime="20200623 08:52:58.148"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
@@ -271,8 +291,8 @@
 <arg>${testsRootFolder}</arg>
 <arg>/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</arg>
 </arguments>
-<msg timestamp="20200623 00:35:19.685" level="INFO">${testsRootFolder} = /Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</msg>
-<status status="PASS" endtime="20200623 00:35:19.685" starttime="20200623 00:35:19.684"></status>
+<msg timestamp="20200623 08:52:58.149" level="INFO">${testsRootFolder} = /Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</msg>
+<status status="PASS" endtime="20200623 08:52:58.149" starttime="20200623 08:52:58.149"></status>
 </kw>
 <kw name="Create Webdriver" library="Selenium2Library">
 <doc>Creates an instance of Selenium WebDriver.</doc>
@@ -280,34 +300,34 @@
 <arg>Chrome</arg>
 <arg>executable_path=${testsRootFolder}${/}chromedriver</arg>
 </arguments>
-<msg timestamp="20200623 00:35:19.686" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<msg timestamp="20200623 00:35:20.703" level="DEBUG">POST http://127.0.0.1:55018/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
-<msg timestamp="20200623 00:35:20.704" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:55018</msg>
-<msg timestamp="20200623 00:35:21.550" level="DEBUG">http://127.0.0.1:55018 "POST /session HTTP/1.1" 200 727</msg>
-<msg timestamp="20200623 00:35:21.550" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:21.551" level="DEBUG">Created Chrome WebDriver instance with session id 78329b4a850609de2eda9267c2283bca.</msg>
-<status status="PASS" endtime="20200623 00:35:21.551" starttime="20200623 00:35:19.685"></status>
+<msg timestamp="20200623 08:52:58.150" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20200623 08:52:59.166" level="DEBUG">POST http://127.0.0.1:61189/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20200623 08:52:59.166" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:61189</msg>
+<msg timestamp="20200623 08:52:59.980" level="DEBUG">http://127.0.0.1:61189 "POST /session HTTP/1.1" 200 727</msg>
+<msg timestamp="20200623 08:52:59.980" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:52:59.981" level="DEBUG">Created Chrome WebDriver instance with session id c4ad7492549248524eb03eb18c4c4242.</msg>
+<status status="PASS" endtime="20200623 08:52:59.981" starttime="20200623 08:52:58.149"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
 </arguments>
-<msg timestamp="20200623 00:35:21.552" level="INFO">Opening url 'about:blank'</msg>
-<msg timestamp="20200623 00:35:21.552" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/url {"url": "about:blank"}</msg>
-<msg timestamp="20200623 00:35:21.573" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:21.574" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:21.574" starttime="20200623 00:35:21.551"></status>
+<msg timestamp="20200623 08:52:59.982" level="INFO">Opening url 'about:blank'</msg>
+<msg timestamp="20200623 08:52:59.982" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/url {"url": "about:blank"}</msg>
+<msg timestamp="20200623 08:53:00.014" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:00.015" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:00.015" starttime="20200623 08:52:59.982"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:21.574" starttime="20200623 00:35:19.682"></status>
+<status status="PASS" endtime="20200623 08:53:00.016" starttime="20200623 08:52:58.146"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200623 00:35:21.575" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
-<status status="PASS" endtime="20200623 00:35:21.575" starttime="20200623 00:35:21.575"></status>
+<msg timestamp="20200623 08:53:00.017" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200623 08:53:00.017" starttime="20200623 08:53:00.016"></status>
 </kw>
 <kw name="Set Window Size" library="Selenium2Library">
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
@@ -315,10 +335,10 @@
 <arg>1250</arg>
 <arg>930</arg>
 </arguments>
-<msg timestamp="20200623 00:35:21.576" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/window/rect {"y": null, "x": null, "width": 1250, "height": 930}</msg>
-<msg timestamp="20200623 00:35:21.700" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/window/rect HTTP/1.1" 200 51</msg>
-<msg timestamp="20200623 00:35:21.700" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:21.700" starttime="20200623 00:35:21.576"></status>
+<msg timestamp="20200623 08:53:00.018" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/window/rect {"y": null, "x": null, "width": 1250, "height": 930}</msg>
+<msg timestamp="20200623 08:53:00.139" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/window/rect HTTP/1.1" 200 51</msg>
+<msg timestamp="20200623 08:53:00.140" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:00.140" starttime="20200623 08:53:00.017"></status>
 </kw>
 <kw name="Navigate to Landing Page" library="GetStarted">
 <kw name="Go To" library="Selenium2Library">
@@ -326,14 +346,18 @@
 <arguments>
 <arg>${URL.${ENVIRONMENT}}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:21.701" level="INFO">Opening url 'https://web.gtv.org'</msg>
-<msg timestamp="20200623 00:35:21.701" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/url {"url": "https://web.gtv.org"}</msg>
-<msg timestamp="20200623 00:35:22.044" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:22.044" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:22.044" starttime="20200623 00:35:21.701"></status>
+<msg timestamp="20200623 08:53:00.141" level="INFO">Opening url 'https://web.gtv.org'</msg>
+<msg timestamp="20200623 08:53:00.141" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/url {"url": "https://web.gtv.org"}</msg>
+<msg timestamp="20200623 08:53:00.455" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:00.456" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:00.456" starttime="20200623 08:53:00.140"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:22.044" starttime="20200623 00:35:21.700"></status>
+<status status="PASS" endtime="20200623 08:53:00.456" starttime="20200623 08:53:00.140"></status>
 </kw>
+<kw name="Search in site and go to the first find">
+<arguments>
+<arg>郭</arg>
+</arguments>
 <kw name="Click When Available" library="Common">
 <arguments>
 <arg>id=search-input</arg>
@@ -344,56 +368,56 @@
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:22.045" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
-<msg timestamp="20200623 00:35:22.129" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:22.129" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:22.332" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
-<msg timestamp="20200623 00:35:22.337" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:22.337" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:22.538" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
-<msg timestamp="20200623 00:35:23.112" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:23.113" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.113" level="DEBUG">GET http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/enabled {"id": "e7ab0aa8-990d-4957-9f54-572a5c874158"}</msg>
-<msg timestamp="20200623 00:35:23.435" level="DEBUG">http://127.0.0.1:55018 "GET /session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/enabled HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.436" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.436" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "e7ab0aa8-990d-4957-9f54-572a5c874158", "ELEMENT": "e7ab0aa8-990d-4957-9f54-572a5c874158"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
-<msg timestamp="20200623 00:35:23.499" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/execute/sync HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.500" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:23.500" starttime="20200623 00:35:22.045"></status>
+<msg timestamp="20200623 08:53:00.458" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200623 08:53:00.542" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:00.542" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:00.746" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200623 08:53:00.752" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:00.752" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:00.957" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200623 08:53:01.545" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:01.546" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:01.546" level="DEBUG">GET http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/enabled {"id": "afd42832-35a1-4d36-b736-1fdba263db3b"}</msg>
+<msg timestamp="20200623 08:53:01.882" level="DEBUG">http://127.0.0.1:61189 "GET /session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:01.883" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:01.883" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "afd42832-35a1-4d36-b736-1fdba263db3b", "ELEMENT": "afd42832-35a1-4d36-b736-1fdba263db3b"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200623 08:53:01.907" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:01.908" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:01.908" starttime="20200623 08:53:00.458"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:23.501" level="INFO">Clicking element 'id=search-input'.</msg>
-<msg timestamp="20200623 00:35:23.501" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
-<msg timestamp="20200623 00:35:23.515" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:23.516" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.516" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/click {"id": "e7ab0aa8-990d-4957-9f54-572a5c874158"}</msg>
-<msg timestamp="20200623 00:35:23.647" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.647" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:23.648" starttime="20200623 00:35:23.500"></status>
+<msg timestamp="20200623 08:53:01.910" level="INFO">Clicking element 'id=search-input'.</msg>
+<msg timestamp="20200623 08:53:01.910" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200623 08:53:01.924" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:01.925" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:01.925" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/click {"id": "afd42832-35a1-4d36-b736-1fdba263db3b"}</msg>
+<msg timestamp="20200623 08:53:02.063" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:02.064" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:02.064" starttime="20200623 08:53:01.909"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:23.648" starttime="20200623 00:35:22.045"></status>
+<status status="PASS" endtime="20200623 08:53:02.064" starttime="20200623 08:53:00.457"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id=search-input</arg>
-<arg>郭</arg>
+<arg>${keyword}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:23.649" level="INFO">Typing text '郭' into text field 'id=search-input'.</msg>
-<msg timestamp="20200623 00:35:23.649" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
-<msg timestamp="20200623 00:35:23.657" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:23.657" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.657" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/clear {"id": "e7ab0aa8-990d-4957-9f54-572a5c874158"}</msg>
-<msg timestamp="20200623 00:35:23.684" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/clear HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.684" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.684" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/value {"text": "\u90ed", "id": "e7ab0aa8-990d-4957-9f54-572a5c874158", "value": ["\u90ed"]}</msg>
-<msg timestamp="20200623 00:35:23.748" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/element/e7ab0aa8-990d-4957-9f54-572a5c874158/value HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.748" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:23.748" starttime="20200623 00:35:23.648"></status>
+<msg timestamp="20200623 08:53:02.065" level="INFO">Typing text '郭' into text field 'id=search-input'.</msg>
+<msg timestamp="20200623 08:53:02.066" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200623 08:53:02.073" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:02.074" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.074" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/clear {"id": "afd42832-35a1-4d36-b736-1fdba263db3b"}</msg>
+<msg timestamp="20200623 08:53:02.106" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:02.106" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.106" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/value {"text": "\u90ed", "id": "afd42832-35a1-4d36-b736-1fdba263db3b", "value": ["\u90ed"]}</msg>
+<msg timestamp="20200623 08:53:02.182" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/element/afd42832-35a1-4d36-b736-1fdba263db3b/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:02.182" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:02.183" starttime="20200623 08:53:02.065"></status>
 </kw>
 <kw name="Click When Available" library="Common">
 <arguments>
@@ -405,32 +429,32 @@
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:23.750" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".search-btn"}</msg>
-<msg timestamp="20200623 00:35:23.760" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:23.761" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.761" level="DEBUG">GET http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/3579ad23-0250-43da-be4a-2bd6cb52f3f3/enabled {"id": "3579ad23-0250-43da-be4a-2bd6cb52f3f3"}</msg>
-<msg timestamp="20200623 00:35:23.767" level="DEBUG">http://127.0.0.1:55018 "GET /session/78329b4a850609de2eda9267c2283bca/element/3579ad23-0250-43da-be4a-2bd6cb52f3f3/enabled HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.767" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.768" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "3579ad23-0250-43da-be4a-2bd6cb52f3f3", "ELEMENT": "3579ad23-0250-43da-be4a-2bd6cb52f3f3"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
-<msg timestamp="20200623 00:35:23.773" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/execute/sync HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.774" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:23.774" starttime="20200623 00:35:23.750"></status>
+<msg timestamp="20200623 08:53:02.184" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".search-btn"}</msg>
+<msg timestamp="20200623 08:53:02.198" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:02.198" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.198" level="DEBUG">GET http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/088300fb-2507-4146-b285-162a85d0ffce/enabled {"id": "088300fb-2507-4146-b285-162a85d0ffce"}</msg>
+<msg timestamp="20200623 08:53:02.213" level="DEBUG">http://127.0.0.1:61189 "GET /session/c4ad7492549248524eb03eb18c4c4242/element/088300fb-2507-4146-b285-162a85d0ffce/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:02.214" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.214" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "088300fb-2507-4146-b285-162a85d0ffce", "ELEMENT": "088300fb-2507-4146-b285-162a85d0ffce"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200623 08:53:02.220" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:02.220" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:02.221" starttime="20200623 08:53:02.184"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:23.774" level="INFO">Clicking element 'css=.search-btn'.</msg>
-<msg timestamp="20200623 00:35:23.774" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".search-btn"}</msg>
-<msg timestamp="20200623 00:35:23.779" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:23.779" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:23.780" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/3579ad23-0250-43da-be4a-2bd6cb52f3f3/click {"id": "3579ad23-0250-43da-be4a-2bd6cb52f3f3"}</msg>
-<msg timestamp="20200623 00:35:23.883" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/element/3579ad23-0250-43da-be4a-2bd6cb52f3f3/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:23.883" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:23.883" starttime="20200623 00:35:23.774"></status>
+<msg timestamp="20200623 08:53:02.221" level="INFO">Clicking element 'css=.search-btn'.</msg>
+<msg timestamp="20200623 08:53:02.221" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".search-btn"}</msg>
+<msg timestamp="20200623 08:53:02.226" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:02.227" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.227" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/088300fb-2507-4146-b285-162a85d0ffce/click {"id": "088300fb-2507-4146-b285-162a85d0ffce"}</msg>
+<msg timestamp="20200623 08:53:02.325" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/element/088300fb-2507-4146-b285-162a85d0ffce/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:02.325" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:02.326" starttime="20200623 08:53:02.221"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:23.883" starttime="20200623 00:35:23.749"></status>
+<status status="PASS" endtime="20200623 08:53:02.326" starttime="20200623 08:53:02.183"></status>
 </kw>
 <kw name="Click When Available" library="Common">
 <arguments>
@@ -442,72 +466,109 @@
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:23.885" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:23.894" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:23.894" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:24.097" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:24.101" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:24.102" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:24.306" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:24.311" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:24.312" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:24.513" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:24.518" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:24.518" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:24.722" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:24.728" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20200623 00:35:24.728" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:24.931" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:24.998" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:24.998" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:24.999" level="DEBUG">GET http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/f001095d-cd4d-48a6-9f66-c5cdbbccbd39/enabled {"id": "f001095d-cd4d-48a6-9f66-c5cdbbccbd39"}</msg>
-<msg timestamp="20200623 00:35:25.007" level="DEBUG">http://127.0.0.1:55018 "GET /session/78329b4a850609de2eda9267c2283bca/element/f001095d-cd4d-48a6-9f66-c5cdbbccbd39/enabled HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:25.007" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:25.007" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "f001095d-cd4d-48a6-9f66-c5cdbbccbd39", "ELEMENT": "f001095d-cd4d-48a6-9f66-c5cdbbccbd39"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
-<msg timestamp="20200623 00:35:25.013" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/execute/sync HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:25.013" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:25.014" starttime="20200623 00:35:23.884"></status>
+<msg timestamp="20200623 08:53:02.329" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:02.341" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:02.341" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.544" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:02.548" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:02.549" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.753" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:02.759" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:02.759" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:02.961" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:02.966" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:02.966" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.171" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:03.176" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:03.176" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.381" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:03.387" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:03.388" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.593" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:03.598" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200623 08:53:03.599" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.804" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:03.809" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:03.809" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.809" level="DEBUG">GET http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/d2870727-c043-4a8f-b30c-ccbdadbd709e/enabled {"id": "d2870727-c043-4a8f-b30c-ccbdadbd709e"}</msg>
+<msg timestamp="20200623 08:53:03.816" level="DEBUG">http://127.0.0.1:61189 "GET /session/c4ad7492549248524eb03eb18c4c4242/element/d2870727-c043-4a8f-b30c-ccbdadbd709e/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:03.817" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.817" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "d2870727-c043-4a8f-b30c-ccbdadbd709e", "ELEMENT": "d2870727-c043-4a8f-b30c-ccbdadbd709e"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200623 08:53:03.824" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:03.825" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:03.825" starttime="20200623 08:53:02.327"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200623 00:35:25.014" level="INFO">Clicking element 'css=.swiper-slide-active .headpicimg'.</msg>
-<msg timestamp="20200623 00:35:25.015" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200623 00:35:25.020" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20200623 00:35:25.020" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200623 00:35:25.020" level="DEBUG">POST http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca/element/f001095d-cd4d-48a6-9f66-c5cdbbccbd39/click {"id": "f001095d-cd4d-48a6-9f66-c5cdbbccbd39"}</msg>
-<msg timestamp="20200623 00:35:25.100" level="DEBUG">http://127.0.0.1:55018 "POST /session/78329b4a850609de2eda9267c2283bca/element/f001095d-cd4d-48a6-9f66-c5cdbbccbd39/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:25.100" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:25.100" starttime="20200623 00:35:25.014"></status>
+<msg timestamp="20200623 08:53:03.826" level="INFO">Clicking element 'css=.swiper-slide-active .headpicimg'.</msg>
+<msg timestamp="20200623 08:53:03.826" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200623 08:53:03.833" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:03.834" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:03.834" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/d2870727-c043-4a8f-b30c-ccbdadbd709e/click {"id": "d2870727-c043-4a8f-b30c-ccbdadbd709e"}</msg>
+<msg timestamp="20200623 08:53:03.938" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/element/d2870727-c043-4a8f-b30c-ccbdadbd709e/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200623 08:53:03.938" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200623 08:53:03.939" starttime="20200623 08:53:03.825"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:25.101" starttime="20200623 00:35:23.884"></status>
+<status status="PASS" endtime="20200623 08:53:03.939" starttime="20200623 08:53:02.326"></status>
+</kw>
+<status status="PASS" endtime="20200623 08:53:03.939" starttime="20200623 08:53:00.456"></status>
+</kw>
+<kw name="Verify Seeing Search result">
+<arguments>
+<arg>郭文贵MILES</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200623 08:53:05.942" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20200623 08:53:05.942" starttime="20200623 08:53:03.941"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/span[2]</arg>
+<arg>${search}</arg>
+</arguments>
+<msg timestamp="20200623 08:53:05.943" level="DEBUG">POST http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/elements {"using": "xpath", "value": "/html/body/div[1]/div[3]/div[2]/div/div[1]/span[2]"}</msg>
+<msg timestamp="20200623 08:53:05.954" level="DEBUG">http://127.0.0.1:61189 "POST /session/c4ad7492549248524eb03eb18c4c4242/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200623 08:53:05.954" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:05.954" level="DEBUG">GET http://127.0.0.1:61189/session/c4ad7492549248524eb03eb18c4c4242/element/0c8b34d7-8874-463d-9145-2eb997ac4dc5/text {"id": "0c8b34d7-8874-463d-9145-2eb997ac4dc5"}</msg>
+<msg timestamp="20200623 08:53:05.966" level="DEBUG">http://127.0.0.1:61189 "GET /session/c4ad7492549248524eb03eb18c4c4242/element/0c8b34d7-8874-463d-9145-2eb997ac4dc5/text HTTP/1.1" 200 26</msg>
+<msg timestamp="20200623 08:53:05.966" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200623 08:53:05.966" level="INFO">Element 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/span[2]' contains text '郭文贵MILES'.</msg>
+<status status="PASS" endtime="20200623 08:53:05.966" starttime="20200623 08:53:05.943"></status>
+</kw>
+<status status="PASS" endtime="20200623 08:53:05.966" starttime="20200623 08:53:03.940"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>5s</arg>
+<arg>1s</arg>
 </arguments>
-<msg timestamp="20200623 00:35:30.103" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20200623 00:35:30.103" starttime="20200623 00:35:25.101"></status>
+<msg timestamp="20200623 08:53:06.968" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200623 08:53:06.968" starttime="20200623 08:53:05.966"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20200623 00:35:30.104" level="DEBUG">Closing browser with session id 78329b4a850609de2eda9267c2283bca.</msg>
-<msg timestamp="20200623 00:35:30.104" level="DEBUG">DELETE http://127.0.0.1:55018/session/78329b4a850609de2eda9267c2283bca {}</msg>
-<msg timestamp="20200623 00:35:30.164" level="DEBUG">http://127.0.0.1:55018 "DELETE /session/78329b4a850609de2eda9267c2283bca HTTP/1.1" 200 14</msg>
-<msg timestamp="20200623 00:35:30.164" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200623 00:35:30.227" starttime="20200623 00:35:30.104"></status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Close Browser</arg>
+</arguments>
+<msg timestamp="20200623 08:53:06.970" level="INFO">Close Browser</msg>
+<status status="PASS" endtime="20200623 08:53:06.970" starttime="20200623 08:53:06.969"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:30.227" starttime="20200623 00:35:30.103"></status>
+<status status="PASS" endtime="20200623 08:53:06.970" starttime="20200623 08:53:06.969"></status>
 </kw>
-<status status="PASS" endtime="20200623 00:35:30.227" critical="yes" starttime="20200623 00:35:19.680"></status>
+<status status="PASS" endtime="20200623 08:53:06.970" critical="yes" starttime="20200623 08:52:58.146"></status>
 </test>
-<status status="PASS" endtime="20200623 00:35:30.229" starttime="20200623 00:35:19.671"></status>
+<status status="PASS" endtime="20200623 08:53:06.972" starttime="20200623 08:52:58.140"></status>
 </suite>
-<status status="PASS" endtime="20200623 00:35:30.233" starttime="20200623 00:35:09.247"></status>
+<status status="PASS" endtime="20200623 08:53:06.974" starttime="20200623 08:52:49.249"></status>
 </suite>
 <statistics>
 <total>
@@ -523,5 +584,6 @@
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20200623 08:52:55.040" level="WARN">Keyword 'Selenium2Library.Press Key' is deprecated. use `Press Keys` instead.</msg>
 </errors>
 </robot>
