@@ -50,6 +50,10 @@ In folder /results/chrome, you could check details of the latest testing result 
    When running many automated tests, we may get blocked & blacklisted by server. In preparing this demo, I ran 
     into this issue, and my connections to ssense.com got terminated. I had to set up a seperate machine to
     finish the tests. 
+    
+   Also automated tests need to by pass security check pages like this:
+    ![SSense verification page](Sample-project/Search-in-Website/results/chrome/Security Check.png "Logo Title Text 1")
+       
        
 ### 2. Update browser driver 
    Old browser driver would sometimes lead to unexpected errors.
