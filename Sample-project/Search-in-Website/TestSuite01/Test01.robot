@@ -21,17 +21,11 @@ Open Browser Nav to SSense and Search for Shirt
     Set Window Size 	1250 	930
 
     GetStarted.Navigate to Landing Page
-    sleep  2s
+    sleep  1s
     Common.Click When Available  xpath=//*[@id="app"]/div[1]/header/div[1]/i
-    sleep  2s
-    #Common.Click When Available  xpath=//*[@id="app"]/div[1]/header/div[2]/div/nav[1]/ul[1]/li[4]/div
-    Common.Click When Available  xpath=//*[@id="app"]/div[1]/header/div[2]/div/nav[1]/ul[1]/li[4]/div/a
-    #Common.Click When Available   xpath=//input[@id='search-form-input']
-    sleep  2s
-#    Execute Javascript    document.getElementById("search-form-input").innerHTML = "shirt";
-#    Execute Javascript    document.getElementsByClassName('search-form')[0].click();
-#    Input Text  xpath=//input[@id='search-form-input']  shirt
-#    Press Key  xpath=//input[@id='search-form-input']  \\1
-#    Press Key  xpath=//input[@id='search-form-input']  \\13
-    Go To  ${URL.${ENVIRONMENT}}${/}en-cn/men?q=shirt
+    sleep  1s
+    Common.Click When Available  xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a
+    sleep  1s
+    Input Text  id=search-form-input  shirt
+    Press Keys  xpath=//input[@id='search-form-input']  RETURN
     sleep  3s

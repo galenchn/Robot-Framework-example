@@ -6,9 +6,10 @@ Library  Selenium2Library
 Begin Web Test
     set selenium timeout  30 seconds
     set log level  Debug
-
-    Open Browser  about:blank  ${BROWSER}
-
+    Set Global Variable  ${testsRootFolder}  ${CURDIR}
+#    Open Browser  about:blank  ${BROWSER}
+    Create Webdriver  Chrome  executable_path=${testsRootFolder}${/}chromedriver
+    Go To  about:blank
 
 Click When Available
     [Arguments]  ${elementLocator}

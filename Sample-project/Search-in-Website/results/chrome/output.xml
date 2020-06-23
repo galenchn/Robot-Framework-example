@@ -1,452 +1,527 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20200622 15:40:57.917" generator="Robot 3.1.2 (Python 2.7.17 on darwin)">
-<suite source="/Users/galenchen/Documents/GitHub/RobotFramework_Example/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01" id="s1" name="TestSuite01">
-<suite source="/Users/galenchen/Documents/GitHub/RobotFramework_Example/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test01.robot" id="s1-s1" name="Test01">
+<robot rpa="false" generated="20200622 23:27:41.604" generator="Robot 3.2.1 (Python 2.7.16 on darwin)">
+<suite source="/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01" id="s1" name="TestSuite01">
+<suite source="/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test01.robot" id="s1-s1" name="Test01">
 <test id="s1-s1-t1" name="Open Browser Nav to SSense and Search for Shirt">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Set Selenium Timeout" library="Selenium2Library">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
+<doc>Sets the timeout that is used by various keywords.</doc>
 <arguments>
 <arg>30 seconds</arg>
 </arguments>
-<status status="PASS" endtime="20200622 15:40:58.151" starttime="20200622 15:40:58.150"></status>
+<status status="PASS" endtime="20200622 23:27:41.749" starttime="20200622 23:27:41.749"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200622 15:40:58.151" level="INFO">Log level changed from INFO to DEBUG.</msg>
-<status status="PASS" endtime="20200622 15:40:58.151" starttime="20200622 15:40:58.151"></status>
+<msg timestamp="20200622 23:27:41.750" level="INFO">Log level changed from INFO to DEBUG.</msg>
+<status status="PASS" endtime="20200622 23:27:41.750" starttime="20200622 23:27:41.749"></status>
 </kw>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${testsRootFolder}</arg>
+<arg>/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</arg>
+</arguments>
+<msg timestamp="20200622 23:27:41.750" level="INFO">${testsRootFolder} = /Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</msg>
+<status status="PASS" endtime="20200622 23:27:41.751" starttime="20200622 23:27:41.750"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>executable_path=${testsRootFolder}${/}chromedriver</arg>
+</arguments>
+<msg timestamp="20200622 23:27:41.751" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20200622 23:27:42.768" level="DEBUG">POST http://127.0.0.1:54696/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20200622 23:27:42.769" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:54696</msg>
+<msg timestamp="20200622 23:27:43.554" level="DEBUG">http://127.0.0.1:54696 "POST /session HTTP/1.1" 200 727</msg>
+<msg timestamp="20200622 23:27:43.555" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:43.556" level="DEBUG">Created Chrome WebDriver instance with session id c1ff1e237ad09c5048a2dd6f1fbb543b.</msg>
+<status status="PASS" endtime="20200622 23:27:43.556" starttime="20200622 23:27:41.751"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200622 15:40:58.151" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<msg timestamp="20200622 15:40:59.175" level="DEBUG">POST http://127.0.0.1:60011/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
-<msg timestamp="20200622 15:40:59.176" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:00.284" level="DEBUG">http://127.0.0.1:60011 "POST /session HTTP/1.1" 200 845</msg>
-<msg timestamp="20200622 15:41:00.285" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:00.285" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/timeouts/async_script {"sessionId": "441680b5988437712edd5f9a6f7d10f4", "ms": 30000.0}</msg>
-<msg timestamp="20200622 15:41:00.286" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/timeouts/async_script HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:00.286" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:00.286" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/timeouts/implicit_wait {"sessionId": "441680b5988437712edd5f9a6f7d10f4", "ms": 0.0}</msg>
-<msg timestamp="20200622 15:41:00.287" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/timeouts/implicit_wait HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:00.287" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:00.287" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/url {"url": "about:blank", "sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
-<msg timestamp="20200622 15:41:00.307" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/url HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:00.307" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:00.307" level="DEBUG">Opened browser with session id 441680b5988437712edd5f9a6f7d10f4</msg>
-<status status="PASS" endtime="20200622 15:41:00.307" starttime="20200622 15:40:58.151"></status>
+<msg timestamp="20200622 23:27:43.557" level="INFO">Opening url 'about:blank'</msg>
+<msg timestamp="20200622 23:27:43.557" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/url {"url": "about:blank"}</msg>
+<msg timestamp="20200622 23:27:43.592" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:43.592" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:43.592" starttime="20200622 23:27:43.556"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:00.308" starttime="20200622 15:40:58.150"></status>
+<status status="PASS" endtime="20200622 23:27:43.592" starttime="20200622 23:27:41.749"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200622 15:41:00.309" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
-<status status="PASS" endtime="20200622 15:41:00.309" starttime="20200622 15:41:00.308"></status>
+<msg timestamp="20200622 23:27:43.593" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200622 23:27:43.593" starttime="20200622 23:27:43.593"></status>
 </kw>
 <kw name="Set Window Size" library="Selenium2Library">
-<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
 <arguments>
 <arg>1250</arg>
 <arg>930</arg>
 </arguments>
-<msg timestamp="20200622 15:41:00.309" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/window/current/size {"width": 1250, "windowHandle": "current", "sessionId": "441680b5988437712edd5f9a6f7d10f4", "height": 930}</msg>
-<msg timestamp="20200622 15:41:00.417" level="DEBUG">http://127.0.0.1:60011 "POST /session/441680b5988437712edd5f9a6f7d10f4/window/current/size HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:00.417" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:00.418" starttime="20200622 15:41:00.309"></status>
+<msg timestamp="20200622 23:27:43.594" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/window/rect {"y": null, "x": null, "width": 1250, "height": 930}</msg>
+<msg timestamp="20200622 23:27:43.703" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/window/rect HTTP/1.1" 200 51</msg>
+<msg timestamp="20200622 23:27:43.703" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:43.704" starttime="20200622 23:27:43.593"></status>
 </kw>
 <kw name="Navigate to Landing Page" library="GetStarted">
 <kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${URL.${ENVIRONMENT}}</arg>
 </arguments>
-<msg timestamp="20200622 15:41:00.419" level="INFO">Opening url 'https://www.ssense.com/en-cn'</msg>
-<msg timestamp="20200622 15:41:00.419" level="DEBUG">POST http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/url {"url": "https://www.ssense.com/en-cn", "sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200622 15:41:02.435" level="DEBUG">GET http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4/screenshot {"sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
-<msg timestamp="20200622 15:41:02.435" level="DEBUG">Starting new HTTP connection (2): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.436" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4/screenshot'): Retry(total=2, connect=None, read=None, redirect=None, status=None)</msg>
-<msg timestamp="20200622 15:41:02.436" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107cdaf90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
-<msg timestamp="20200622 15:41:02.436" level="DEBUG">Starting new HTTP connection (3): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.437" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4/screenshot'): Retry(total=1, connect=None, read=None, redirect=None, status=None)</msg>
-<msg timestamp="20200622 15:41:02.437" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16190&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
-<msg timestamp="20200622 15:41:02.437" level="DEBUG">Starting new HTTP connection (4): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.438" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4/screenshot'): Retry(total=0, connect=None, read=None, redirect=None, status=None)</msg>
-<msg timestamp="20200622 15:41:02.438" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16390&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
-<msg timestamp="20200622 15:41:02.439" level="DEBUG">Starting new HTTP connection (5): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.445" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60011): Max retries exceeded with url: /session/441680b5988437712edd5f9a6f7d10f4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16510&gt;: Failed to establish a new connection: [Errno 61] Connection refused',))</msg>
-<msg timestamp="20200622 15:41:02.446" level="DEBUG">Traceback (most recent call last):
-  File "&lt;decorator-gen-147&gt;", line 2, in capture_page_screenshot
-  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/_screenshot.py", line 91, in capture_page_screenshot
-    if not self._current_browser().get_screenshot_as_file(path):
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1032, in get_screenshot_as_file
-    png = self.get_screenshot_as_png()
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1064, in get_screenshot_as_png
-    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 1074, in get_screenshot_as_base64
-    return self.execute(Command.SCREENSHOT)['value']
-  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/webdrivermonkeypatches.py", line 11, in execute
-    result = self._base_execute(driver_command, params)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 319, in execute
-    response = self.command_executor.execute(driver_command, params)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 374, in execute
-    return self._request(command_info[0], url, body=data)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
-    resp = self._conn.request(method, url, body=body, headers=headers)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 68, in request
-    **urlopen_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 89, in request_encode_url
-    return self.urlopen(method, url, **extra_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/poolmanager.py", line 323, in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 667, in urlopen
-    **response_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 667, in urlopen
-    **response_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 667, in urlopen
-    **response_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "/usr/local/lib/python2.7/site-packages/urllib3/util/retry.py", line 398, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))</msg>
-<status status="FAIL" endtime="20200622 15:41:02.446" starttime="20200622 15:41:02.432"></status>
+<msg timestamp="20200622 23:27:43.705" level="INFO">Opening url 'https://www.ssense.com/en-cn'</msg>
+<msg timestamp="20200622 23:27:43.705" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/url {"url": "https://www.ssense.com/en-cn"}</msg>
+<msg timestamp="20200622 23:27:44.962" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:44.962" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:44.963" starttime="20200622 23:27:43.704"></status>
 </kw>
-<msg timestamp="20200622 15:41:02.448" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60011): Max retries exceeded with url: /session/441680b5988437712edd5f9a6f7d10f4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16510&gt;: Failed to establish a new connection: [Errno 61] Connection refused',))</msg>
-<msg timestamp="20200622 15:41:02.453" level="FAIL">ProtocolError: ('Connection aborted.', BadStatusLine('No status line received - the server has closed the connection',))</msg>
-<msg timestamp="20200622 15:41:02.453" level="DEBUG">Traceback (most recent call last):
-  File "&lt;decorator-gen-36&gt;", line 2, in go_to
-  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/keywordgroup.py", line 15, in _run_on_failure_decorator
-    return method(*args, **kwargs)
-  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/keywords/_browsermanagement.py", line 412, in go_to
-    self._current_browser().get(url)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "/usr/local/lib/python2.7/site-packages/Selenium2Library/webdrivermonkeypatches.py", line 11, in execute
-    result = self._base_execute(driver_command, params)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 319, in execute
-    response = self.command_executor.execute(driver_command, params)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 374, in execute
-    return self._request(command_info[0], url, body=data)
-  File "/usr/local/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
-    resp = self._conn.request(method, url, body=body, headers=headers)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 72, in request
-    **urlopen_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/request.py", line 150, in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/poolmanager.py", line 323, in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "/usr/local/lib/python2.7/site-packages/urllib3/util/retry.py", line 367, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
-    chunked=chunked)
-  File "/usr/local/lib/python2.7/site-packages/urllib3/connectionpool.py", line 377, in _make_request
-    httplib_response = conn.getresponse(buffering=True)
-  File "/usr/local/Cellar/python@2/2.7.17_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 1148, in getresponse
-    response.begin()
-  File "/usr/local/Cellar/python@2/2.7.17_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 448, in begin
-    version, status, reason = self._read_status()
-  File "/usr/local/Cellar/python@2/2.7.17_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 412, in _read_status
-    raise BadStatusLine("No status line received - the server has closed the connection")</msg>
-<status status="FAIL" endtime="20200622 15:41:02.453" starttime="20200622 15:41:00.418"></status>
+<status status="PASS" endtime="20200622 23:27:44.963" starttime="20200622 23:27:43.704"></status>
 </kw>
-<status status="FAIL" endtime="20200622 15:41:02.454" starttime="20200622 15:41:00.418"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200622 23:27:45.964" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200622 23:27:45.965" starttime="20200622 23:27:44.963"></status>
+</kw>
+<kw name="Click When Available" library="Common">
+<arguments>
+<arg>xpath=//*[@id="app"]/div[1]/header/div[1]/i</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200622 23:27:45.967" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div[1]/i"}</msg>
+<msg timestamp="20200622 23:27:45.987" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:45.988" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:45.988" level="DEBUG">GET http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff/enabled {"id": "a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff"}</msg>
+<msg timestamp="20200622 23:27:45.996" level="DEBUG">http://127.0.0.1:54696 "GET /session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:45.996" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:45.996" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff", "ELEMENT": "a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200622 23:27:46.002" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:46.002" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:46.003" starttime="20200622 23:27:45.966"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+</arguments>
+<msg timestamp="20200622 23:27:46.003" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/header/div[1]/i'.</msg>
+<msg timestamp="20200622 23:27:46.003" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div[1]/i"}</msg>
+<msg timestamp="20200622 23:27:46.008" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:46.009" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:46.009" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff/click {"id": "a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff"}</msg>
+<msg timestamp="20200622 23:27:46.060" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/a4894d37-dc3d-4271-9d5f-0c95e0f8a3ff/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:46.061" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:46.061" starttime="20200622 23:27:46.003"></status>
+</kw>
+<status status="PASS" endtime="20200622 23:27:46.061" starttime="20200622 23:27:45.965"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200622 23:27:47.062" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200622 23:27:47.062" starttime="20200622 23:27:46.061"></status>
+</kw>
+<kw name="Click When Available" library="Common">
+<arguments>
+<arg>xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20200622 23:27:47.064" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a"}</msg>
+<msg timestamp="20200622 23:27:47.076" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:47.076" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:47.076" level="DEBUG">GET http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/47e422a9-ff9b-448c-90e0-2c7a7252d20c/enabled {"id": "47e422a9-ff9b-448c-90e0-2c7a7252d20c"}</msg>
+<msg timestamp="20200622 23:27:47.084" level="DEBUG">http://127.0.0.1:54696 "GET /session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/47e422a9-ff9b-448c-90e0-2c7a7252d20c/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:47.085" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:47.085" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "47e422a9-ff9b-448c-90e0-2c7a7252d20c", "ELEMENT": "47e422a9-ff9b-448c-90e0-2c7a7252d20c"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200622 23:27:47.091" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:47.092" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:47.092" starttime="20200622 23:27:47.064"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${elementLocator}</arg>
+</arguments>
+<msg timestamp="20200622 23:27:47.092" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a'.</msg>
+<msg timestamp="20200622 23:27:47.092" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements {"using": "xpath", "value": "//*[@id=\"app\"]/div[1]/header/div/div/nav[1]/ul[1]/li[4]/div/a"}</msg>
+<msg timestamp="20200622 23:27:47.098" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:47.099" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:47.099" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/47e422a9-ff9b-448c-90e0-2c7a7252d20c/click {"id": "47e422a9-ff9b-448c-90e0-2c7a7252d20c"}</msg>
+<msg timestamp="20200622 23:27:47.204" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/47e422a9-ff9b-448c-90e0-2c7a7252d20c/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:47.205" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:47.205" starttime="20200622 23:27:47.092"></status>
+</kw>
+<status status="PASS" endtime="20200622 23:27:47.205" starttime="20200622 23:27:47.063"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200622 23:27:48.208" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200622 23:27:48.208" starttime="20200622 23:27:47.205"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=search-form-input</arg>
+<arg>shirt</arg>
+</arguments>
+<msg timestamp="20200622 23:27:48.209" level="INFO">Typing text 'shirt' into text field 'id=search-form-input'.</msg>
+<msg timestamp="20200622 23:27:48.209" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements {"using": "css selector", "value": "[id=\"search-form-input\"]"}</msg>
+<msg timestamp="20200622 23:27:48.220" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:48.220" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:48.220" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/37a0ae1f-b113-4fc4-9d2c-c99a603cf14a/clear {"id": "37a0ae1f-b113-4fc4-9d2c-c99a603cf14a"}</msg>
+<msg timestamp="20200622 23:27:48.249" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/37a0ae1f-b113-4fc4-9d2c-c99a603cf14a/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:48.249" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:48.250" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/37a0ae1f-b113-4fc4-9d2c-c99a603cf14a/value {"text": "shirt", "id": "37a0ae1f-b113-4fc4-9d2c-c99a603cf14a", "value": ["s", "h", "i", "r", "t"]}</msg>
+<msg timestamp="20200622 23:27:48.319" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/element/37a0ae1f-b113-4fc4-9d2c-c99a603cf14a/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:48.320" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:48.320" starttime="20200622 23:27:48.209"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath=//input[@id='search-form-input']</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200622 23:27:48.321" level="INFO">Sending key(s) (u'RETURN',) to xpath=//input[@id='search-form-input'] element.</msg>
+<msg timestamp="20200622 23:27:48.321" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements {"using": "xpath", "value": "//input[@id='search-form-input']"}</msg>
+<msg timestamp="20200622 23:27:48.329" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:48.329" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:48.330" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 250, "x": 0, "type": "pointerMove", "y": 0, "origin": {"element-6066-11e4-a52e-4f735466cecf": "37a0ae1f-b113-4fc4-9d2c-c99a603cf14a"}}, {"duration": 0, "button": 0, "type": "pointerDown"}, {"duration": 0, "button": 0, "type": "pointerUp"}]}, {"type": "key", "id": "key", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}]}</msg>
+<msg timestamp="20200622 23:27:48.607" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/actions HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:48.607" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:48.608" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200622 23:27:48.608" level="INFO">Releasing special key RETURN.</msg>
+<msg timestamp="20200622 23:27:48.608" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}, {"type": "key", "id": "key", "actions": [{"type": "keyDown", "value": "\ue006"}, {"type": "keyUp", "value": "\ue006"}, {"type": "keyUp", "value": "\ue006"}]}]}</msg>
+<msg timestamp="20200622 23:27:48.647" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/actions HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:48.648" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:48.648" starttime="20200622 23:27:48.320"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200622 23:27:51.650" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20200622 23:27:51.650" starttime="20200622 23:27:48.649"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20200622 15:41:02.455" level="DEBUG">Closing browser with session id 441680b5988437712edd5f9a6f7d10f4</msg>
-<msg timestamp="20200622 15:41:02.455" level="DEBUG">DELETE http://127.0.0.1:60011/session/441680b5988437712edd5f9a6f7d10f4 {"sessionId": "441680b5988437712edd5f9a6f7d10f4"}</msg>
-<msg timestamp="20200622 15:41:02.455" level="DEBUG">Starting new HTTP connection (6): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.456" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4'): Retry(total=2, connect=None, read=None, redirect=None, status=None)</msg>
-<msg timestamp="20200622 15:41:02.456" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88a90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
-<msg timestamp="20200622 15:41:02.456" level="DEBUG">Starting new HTTP connection (7): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.456" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4'): Retry(total=1, connect=None, read=None, redirect=None, status=None)</msg>
-<msg timestamp="20200622 15:41:02.457" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88cd0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
-<msg timestamp="20200622 15:41:02.457" level="DEBUG">Starting new HTTP connection (8): 127.0.0.1:60011</msg>
-<msg timestamp="20200622 15:41:02.458" level="DEBUG">Incremented Retry for (url='/session/441680b5988437712edd5f9a6f7d10f4'): Retry(total=0, connect=None, read=None, redirect=None, status=None)</msg>
-<msg timestamp="20200622 15:41:02.458" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88ed0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
-<msg timestamp="20200622 15:41:02.459" level="DEBUG">Starting new HTTP connection (9): 127.0.0.1:60011</msg>
-<status status="PASS" endtime="20200622 15:41:02.477" starttime="20200622 15:41:02.454"></status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Close Browser</arg>
+</arguments>
+<msg timestamp="20200622 23:27:51.651" level="INFO">Close Browser</msg>
+<status status="PASS" endtime="20200622 23:27:51.652" starttime="20200622 23:27:51.651"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:02.477" starttime="20200622 15:41:02.454"></status>
+<status status="PASS" endtime="20200622 23:27:51.652" starttime="20200622 23:27:51.650"></status>
 </kw>
-<status status="FAIL" endtime="20200622 15:41:02.477" critical="yes" starttime="20200622 15:40:58.149">ProtocolError: ('Connection aborted.', BadStatusLine('No status line received - the server has closed the connection',))</status>
+<status status="PASS" endtime="20200622 23:27:51.652" critical="yes" starttime="20200622 23:27:41.747"></status>
 </test>
-<status status="FAIL" endtime="20200622 15:41:02.479" starttime="20200622 15:40:57.943"></status>
+<status status="PASS" endtime="20200622 23:27:51.653" starttime="20200622 23:27:41.623"></status>
 </suite>
-<suite source="/Users/galenchen/Documents/GitHub/RobotFramework_Example/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test02.robot" id="s1-s2" name="Test02">
+<suite source="/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/TestSuite01/Test02.robot" id="s1-s2" name="Test02">
 <test id="s1-s2-t1" name="Open Browser and nav to GTV and search site for 郭">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Set Selenium Timeout" library="Selenium2Library">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
+<doc>Sets the timeout that is used by various keywords.</doc>
 <arguments>
 <arg>30 seconds</arg>
 </arguments>
-<status status="PASS" endtime="20200622 15:41:02.489" starttime="20200622 15:41:02.488"></status>
+<msg timestamp="20200622 23:27:51.661" level="DEBUG">POST http://127.0.0.1:54696/session/c1ff1e237ad09c5048a2dd6f1fbb543b/timeouts {"script": 30000}</msg>
+<msg timestamp="20200622 23:27:51.662" level="DEBUG">http://127.0.0.1:54696 "POST /session/c1ff1e237ad09c5048a2dd6f1fbb543b/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:51.663" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:51.663" starttime="20200622 23:27:51.661"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200622 15:41:02.489" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
-<status status="PASS" endtime="20200622 15:41:02.489" starttime="20200622 15:41:02.489"></status>
+<msg timestamp="20200622 23:27:51.663" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200622 23:27:51.664" starttime="20200622 23:27:51.663"></status>
 </kw>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${testsRootFolder}</arg>
+<arg>/Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</arg>
+</arguments>
+<msg timestamp="20200622 23:27:51.664" level="INFO">${testsRootFolder} = /Users/ningfang/Documents/GitHub/Robot-Framework-example/Sample-project/Search-in-Website/Resources</msg>
+<status status="PASS" endtime="20200622 23:27:51.664" starttime="20200622 23:27:51.664"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>executable_path=${testsRootFolder}${/}chromedriver</arg>
+</arguments>
+<msg timestamp="20200622 23:27:51.665" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20200622 23:27:52.683" level="DEBUG">POST http://127.0.0.1:54759/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20200622 23:27:52.683" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:54759</msg>
+<msg timestamp="20200622 23:27:53.424" level="DEBUG">http://127.0.0.1:54759 "POST /session HTTP/1.1" 200 727</msg>
+<msg timestamp="20200622 23:27:53.425" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:53.425" level="DEBUG">Created Chrome WebDriver instance with session id ea423c6025eb708772e03fa9ea8e1b7f.</msg>
+<status status="PASS" endtime="20200622 23:27:53.426" starttime="20200622 23:27:51.665"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200622 15:41:02.490" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<msg timestamp="20200622 15:41:03.506" level="DEBUG">POST http://127.0.0.1:60086/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": [], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": [], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
-<msg timestamp="20200622 15:41:03.507" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:60086</msg>
-<msg timestamp="20200622 15:41:04.642" level="DEBUG">http://127.0.0.1:60086 "POST /session HTTP/1.1" 200 845</msg>
-<msg timestamp="20200622 15:41:04.642" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:04.642" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/timeouts/async_script {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "ms": 30000.0}</msg>
-<msg timestamp="20200622 15:41:04.643" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/timeouts/async_script HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:04.643" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:04.643" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/timeouts/implicit_wait {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "ms": 0.0}</msg>
-<msg timestamp="20200622 15:41:04.644" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/timeouts/implicit_wait HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:04.644" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:04.644" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/url {"url": "about:blank", "sessionId": "6f63a14d87420568cb712e5efa9f1605"}</msg>
-<msg timestamp="20200622 15:41:04.771" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/url HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:04.771" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:04.771" level="DEBUG">Opened browser with session id 6f63a14d87420568cb712e5efa9f1605</msg>
-<status status="PASS" endtime="20200622 15:41:04.772" starttime="20200622 15:41:02.490"></status>
+<msg timestamp="20200622 23:27:53.426" level="INFO">Opening url 'about:blank'</msg>
+<msg timestamp="20200622 23:27:53.427" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/url {"url": "about:blank"}</msg>
+<msg timestamp="20200622 23:27:53.445" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:53.445" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:53.446" starttime="20200622 23:27:53.426"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:04.772" starttime="20200622 15:41:02.488"></status>
+<status status="PASS" endtime="20200622 23:27:53.446" starttime="20200622 23:27:51.661"></status>
 </kw>
 <kw name="Set Log Level" library="BuiltIn">
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
 <arguments>
 <arg>Debug</arg>
 </arguments>
-<msg timestamp="20200622 15:41:04.773" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
-<status status="PASS" endtime="20200622 15:41:04.773" starttime="20200622 15:41:04.773"></status>
+<msg timestamp="20200622 23:27:53.447" level="INFO">Log level changed from DEBUG to DEBUG.</msg>
+<status status="PASS" endtime="20200622 23:27:53.447" starttime="20200622 23:27:53.446"></status>
 </kw>
 <kw name="Set Window Size" library="Selenium2Library">
-<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
 <arguments>
 <arg>1250</arg>
 <arg>930</arg>
 </arguments>
-<msg timestamp="20200622 15:41:04.774" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/window/current/size {"width": 1250, "windowHandle": "current", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "height": 930}</msg>
-<msg timestamp="20200622 15:41:04.882" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/window/current/size HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:04.883" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:04.883" starttime="20200622 15:41:04.773"></status>
+<msg timestamp="20200622 23:27:53.448" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/window/rect {"y": null, "x": null, "width": 1250, "height": 930}</msg>
+<msg timestamp="20200622 23:27:53.563" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/window/rect HTTP/1.1" 200 51</msg>
+<msg timestamp="20200622 23:27:53.564" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:53.564" starttime="20200622 23:27:53.448"></status>
 </kw>
 <kw name="Navigate to Landing Page" library="GetStarted">
 <kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${URL.${ENVIRONMENT}}</arg>
 </arguments>
-<msg timestamp="20200622 15:41:04.884" level="INFO">Opening url 'https://web.gtv.org'</msg>
-<msg timestamp="20200622 15:41:04.884" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/url {"url": "https://web.gtv.org", "sessionId": "6f63a14d87420568cb712e5efa9f1605"}</msg>
-<msg timestamp="20200622 15:41:05.597" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/url HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:05.598" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:05.598" starttime="20200622 15:41:04.884"></status>
+<msg timestamp="20200622 23:27:53.565" level="INFO">Opening url 'https://web.gtv.org'</msg>
+<msg timestamp="20200622 23:27:53.565" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/url {"url": "https://web.gtv.org"}</msg>
+<msg timestamp="20200622 23:27:53.909" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:53.909" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:53.909" starttime="20200622 23:27:53.565"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:05.598" starttime="20200622 15:41:04.883"></status>
+<status status="PASS" endtime="20200622 23:27:53.909" starttime="20200622 23:27:53.564"></status>
 </kw>
 <kw name="Click When Available" library="Common">
 <arguments>
 <arg>id=search-input</arg>
 </arguments>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is enabled.</doc>
+<doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200622 15:41:05.600" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
-<msg timestamp="20200622 15:41:05.613" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
-<msg timestamp="20200622 15:41:05.613" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:05.819" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
-<msg timestamp="20200622 15:41:06.884" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:06.884" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:06.884" level="DEBUG">GET http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/attribute/disabled {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "name": "disabled", "id": "0.5850021968321626-1"}</msg>
-<msg timestamp="20200622 15:41:07.054" level="DEBUG">http://127.0.0.1:60086 "GET /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/attribute/disabled HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:07.055" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:07.055" starttime="20200622 15:41:05.600"></status>
+<msg timestamp="20200622 23:27:53.910" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200622 23:27:53.991" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200622 23:27:53.991" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:54.196" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200622 23:27:54.201" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200622 23:27:54.202" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:54.404" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200622 23:27:54.980" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:54.980" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:54.980" level="DEBUG">GET http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/enabled {"id": "bfa5a37c-6f41-4e0c-9999-5ba095114f38"}</msg>
+<msg timestamp="20200622 23:27:55.286" level="DEBUG">http://127.0.0.1:54759 "GET /session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.286" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.287" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "bfa5a37c-6f41-4e0c-9999-5ba095114f38", "ELEMENT": "bfa5a37c-6f41-4e0c-9999-5ba095114f38"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200622 23:27:55.296" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.297" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:55.297" starttime="20200622 23:27:53.910"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200622 15:41:07.056" level="INFO">Clicking element 'id=search-input'.</msg>
-<msg timestamp="20200622 15:41:07.056" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
-<msg timestamp="20200622 15:41:07.162" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:07.162" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.162" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/click {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-1"}</msg>
-<msg timestamp="20200622 15:41:07.242" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/click HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:07.242" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:07.243" starttime="20200622 15:41:07.055"></status>
+<msg timestamp="20200622 23:27:55.298" level="INFO">Clicking element 'id=search-input'.</msg>
+<msg timestamp="20200622 23:27:55.298" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200622 23:27:55.306" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:55.307" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.307" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/click {"id": "bfa5a37c-6f41-4e0c-9999-5ba095114f38"}</msg>
+<msg timestamp="20200622 23:27:55.443" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.443" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:55.443" starttime="20200622 23:27:55.297"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:07.243" starttime="20200622 15:41:05.599"></status>
+<status status="PASS" endtime="20200622 23:27:55.443" starttime="20200622 23:27:53.910"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id=search-input</arg>
 <arg>郭</arg>
 </arguments>
-<msg timestamp="20200622 15:41:07.244" level="INFO">Typing text '郭' into text field 'id=search-input'</msg>
-<msg timestamp="20200622 15:41:07.244" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "id", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": "search-input"}</msg>
-<msg timestamp="20200622 15:41:07.251" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:07.252" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.252" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/clear {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-1"}</msg>
-<msg timestamp="20200622 15:41:07.287" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/clear HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:07.287" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.288" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/value {"text": "\u90ed", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-1", "value": ["\u90ed"]}</msg>
-<msg timestamp="20200622 15:41:07.398" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-1/value HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:07.399" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:07.399" starttime="20200622 15:41:07.243"></status>
+<msg timestamp="20200622 23:27:55.444" level="INFO">Typing text '郭' into text field 'id=search-input'.</msg>
+<msg timestamp="20200622 23:27:55.444" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": "[id=\"search-input\"]"}</msg>
+<msg timestamp="20200622 23:27:55.453" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:55.454" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.454" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/clear {"id": "bfa5a37c-6f41-4e0c-9999-5ba095114f38"}</msg>
+<msg timestamp="20200622 23:27:55.476" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.477" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.477" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/value {"text": "\u90ed", "id": "bfa5a37c-6f41-4e0c-9999-5ba095114f38", "value": ["\u90ed"]}</msg>
+<msg timestamp="20200622 23:27:55.553" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/element/bfa5a37c-6f41-4e0c-9999-5ba095114f38/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.553" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:55.554" starttime="20200622 23:27:55.444"></status>
 </kw>
 <kw name="Click When Available" library="Common">
 <arguments>
 <arg>css=.search-btn</arg>
 </arguments>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is enabled.</doc>
+<doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200622 15:41:07.402" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".search-btn"}</msg>
-<msg timestamp="20200622 15:41:07.419" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:07.419" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.419" level="DEBUG">GET http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/attribute/disabled {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "name": "disabled", "id": "0.5850021968321626-2"}</msg>
-<msg timestamp="20200622 15:41:07.424" level="DEBUG">http://127.0.0.1:60086 "GET /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/attribute/disabled HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:07.424" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:07.424" starttime="20200622 15:41:07.401"></status>
+<msg timestamp="20200622 23:27:55.555" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".search-btn"}</msg>
+<msg timestamp="20200622 23:27:55.572" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:55.572" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.572" level="DEBUG">GET http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4/enabled {"id": "8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4"}</msg>
+<msg timestamp="20200622 23:27:55.578" level="DEBUG">http://127.0.0.1:54759 "GET /session/ea423c6025eb708772e03fa9ea8e1b7f/element/8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.579" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.579" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4", "ELEMENT": "8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200622 23:27:55.592" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.592" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:55.593" starttime="20200622 23:27:55.555"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200622 15:41:07.425" level="INFO">Clicking element 'css=.search-btn'.</msg>
-<msg timestamp="20200622 15:41:07.425" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".search-btn"}</msg>
-<msg timestamp="20200622 15:41:07.429" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:07.429" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.430" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/click {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-2"}</msg>
-<msg timestamp="20200622 15:41:07.527" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-2/click HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:07.528" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:07.528" starttime="20200622 15:41:07.424"></status>
+<msg timestamp="20200622 23:27:55.593" level="INFO">Clicking element 'css=.search-btn'.</msg>
+<msg timestamp="20200622 23:27:55.593" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".search-btn"}</msg>
+<msg timestamp="20200622 23:27:55.599" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:55.600" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.600" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4/click {"id": "8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4"}</msg>
+<msg timestamp="20200622 23:27:55.694" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/element/8ba1c5dc-6f0e-4c6c-90e1-30322a00acc4/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:55.694" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:55.694" starttime="20200622 23:27:55.593"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:07.528" starttime="20200622 15:41:07.399"></status>
+<status status="PASS" endtime="20200622 23:27:55.694" starttime="20200622 23:27:55.554"></status>
 </kw>
 <kw name="Click When Available" library="Common">
 <arguments>
 <arg>css=.swiper-slide-active .headpicimg</arg>
 </arguments>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is enabled.</doc>
+<doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20200622 15:41:07.529" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:07.544" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
-<msg timestamp="20200622 15:41:07.544" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.748" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:07.754" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
-<msg timestamp="20200622 15:41:07.755" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:07.960" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:07.965" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
-<msg timestamp="20200622 15:41:07.966" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:08.170" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:08.175" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
-<msg timestamp="20200622 15:41:08.176" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:08.380" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:08.387" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 70</msg>
-<msg timestamp="20200622 15:41:08.387" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:08.591" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:08.597" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:08.598" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:08.598" level="DEBUG">GET http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/attribute/disabled {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "name": "disabled", "id": "0.5850021968321626-3"}</msg>
-<msg timestamp="20200622 15:41:08.608" level="DEBUG">http://127.0.0.1:60086 "GET /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/attribute/disabled HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:08.608" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:08.609" starttime="20200622 15:41:07.529"></status>
+<msg timestamp="20200622 23:27:55.697" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 23:27:55.707" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200622 23:27:55.708" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:55.912" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 23:27:55.917" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200622 23:27:55.917" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:56.123" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 23:27:56.127" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200622 23:27:56.127" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:56.330" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 23:27:56.338" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20200622 23:27:56.338" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:56.540" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 23:27:56.602" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:56.602" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:56.602" level="DEBUG">GET http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6/enabled {"id": "2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6"}</msg>
+<msg timestamp="20200622 23:27:56.609" level="DEBUG">http://127.0.0.1:54759 "GET /session/ea423c6025eb708772e03fa9ea8e1b7f/element/2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6/enabled HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:56.610" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:56.610" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/execute/sync {"args": [{"element-6066-11e4-a52e-4f735466cecf": "2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6", "ELEMENT": "2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6"}, "readonly"], "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);"}</msg>
+<msg timestamp="20200622 23:27:56.616" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/execute/sync HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:56.616" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:56.617" starttime="20200622 23:27:55.696"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${elementLocator}</arg>
 </arguments>
-<msg timestamp="20200622 15:41:08.609" level="INFO">Clicking element 'css=.swiper-slide-active .headpicimg'.</msg>
-<msg timestamp="20200622 15:41:08.610" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/elements {"using": "css selector", "sessionId": "6f63a14d87420568cb712e5efa9f1605", "value": ".swiper-slide-active .headpicimg"}</msg>
-<msg timestamp="20200622 15:41:08.619" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/elements HTTP/1.1" 200 104</msg>
-<msg timestamp="20200622 15:41:08.620" level="DEBUG">Finished Request</msg>
-<msg timestamp="20200622 15:41:08.620" level="DEBUG">POST http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/click {"sessionId": "6f63a14d87420568cb712e5efa9f1605", "id": "0.5850021968321626-3"}</msg>
-<msg timestamp="20200622 15:41:08.769" level="DEBUG">http://127.0.0.1:60086 "POST /session/6f63a14d87420568cb712e5efa9f1605/element/0.5850021968321626-3/click HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:08.769" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:08.770" starttime="20200622 15:41:08.609"></status>
+<msg timestamp="20200622 23:27:56.617" level="INFO">Clicking element 'css=.swiper-slide-active .headpicimg'.</msg>
+<msg timestamp="20200622 23:27:56.617" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/elements {"using": "css selector", "value": ".swiper-slide-active .headpicimg"}</msg>
+<msg timestamp="20200622 23:27:56.622" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20200622 23:27:56.622" level="DEBUG">Finished Request</msg>
+<msg timestamp="20200622 23:27:56.623" level="DEBUG">POST http://127.0.0.1:54759/session/ea423c6025eb708772e03fa9ea8e1b7f/element/2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6/click {"id": "2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6"}</msg>
+<msg timestamp="20200622 23:27:56.715" level="DEBUG">http://127.0.0.1:54759 "POST /session/ea423c6025eb708772e03fa9ea8e1b7f/element/2273cf42-0fbb-4e15-abe4-8d6a3cdcc9d6/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20200622 23:27:56.715" level="DEBUG">Finished Request</msg>
+<status status="PASS" endtime="20200622 23:27:56.716" starttime="20200622 23:27:56.617"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:08.770" starttime="20200622 15:41:07.528"></status>
+<status status="PASS" endtime="20200622 23:27:56.716" starttime="20200622 23:27:55.695"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20200622 15:41:13.771" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20200622 15:41:13.772" starttime="20200622 15:41:08.771"></status>
+<msg timestamp="20200622 23:28:01.718" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20200622 23:28:01.718" starttime="20200622 23:27:56.716"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20200622 15:41:13.773" level="DEBUG">Closing browser with session id 6f63a14d87420568cb712e5efa9f1605</msg>
-<msg timestamp="20200622 15:41:13.773" level="DEBUG">DELETE http://127.0.0.1:60086/session/6f63a14d87420568cb712e5efa9f1605 {"sessionId": "6f63a14d87420568cb712e5efa9f1605"}</msg>
-<msg timestamp="20200622 15:41:13.830" level="DEBUG">http://127.0.0.1:60086 "DELETE /session/6f63a14d87420568cb712e5efa9f1605 HTTP/1.1" 200 72</msg>
-<msg timestamp="20200622 15:41:13.831" level="DEBUG">Finished Request</msg>
-<status status="PASS" endtime="20200622 15:41:13.916" starttime="20200622 15:41:13.772"></status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Close Browser</arg>
+</arguments>
+<msg timestamp="20200622 23:28:01.720" level="INFO">Close Browser</msg>
+<status status="PASS" endtime="20200622 23:28:01.720" starttime="20200622 23:28:01.720"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:13.917" starttime="20200622 15:41:13.772"></status>
+<status status="PASS" endtime="20200622 23:28:01.721" starttime="20200622 23:28:01.719"></status>
 </kw>
-<status status="PASS" endtime="20200622 15:41:13.917" critical="yes" starttime="20200622 15:41:02.487"></status>
+<status status="PASS" endtime="20200622 23:28:01.721" critical="yes" starttime="20200622 23:27:51.660"></status>
 </test>
-<status status="PASS" endtime="20200622 15:41:13.918" starttime="20200622 15:41:02.481"></status>
+<status status="PASS" endtime="20200622 23:28:01.722" starttime="20200622 23:27:51.654"></status>
 </suite>
-<status status="FAIL" endtime="20200622 15:41:13.922" starttime="20200622 15:40:57.919"></status>
+<status status="PASS" endtime="20200622 23:28:01.724" starttime="20200622 23:27:41.606"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="1">Critical Tests</stat>
-<stat fail="1" pass="1">All Tests</stat>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="TestSuite01" pass="1">TestSuite01</stat>
-<stat fail="1" id="s1-s1" name="Test01" pass="0">TestSuite01.Test01</stat>
+<stat fail="0" id="s1" name="TestSuite01" pass="2">TestSuite01</stat>
+<stat fail="0" id="s1-s1" name="Test01" pass="1">TestSuite01.Test01</stat>
 <stat fail="0" id="s1-s2" name="Test02" pass="1">TestSuite01.Test02</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200622 15:41:02.436" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107cdaf90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
-<msg timestamp="20200622 15:41:02.437" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16190&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
-<msg timestamp="20200622 15:41:02.438" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16390&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4/screenshot</msg>
-<msg timestamp="20200622 15:41:02.448" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60011): Max retries exceeded with url: /session/441680b5988437712edd5f9a6f7d10f4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e16510&gt;: Failed to establish a new connection: [Errno 61] Connection refused',))</msg>
-<msg timestamp="20200622 15:41:02.456" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88a90&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
-<msg timestamp="20200622 15:41:02.457" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88cd0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
-<msg timestamp="20200622 15:41:02.458" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x107e88ed0&gt;: Failed to establish a new connection: [Errno 61] Connection refused',)': /session/441680b5988437712edd5f9a6f7d10f4</msg>
 </errors>
 </robot>
