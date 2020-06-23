@@ -3,7 +3,7 @@
 ## Introduction
 This guide will give you some ideas how to use [Robot Framework](https://robotframework.org/) to automate tests. 
 You will learn steps to install Robot Framework, see some sample test cases and understand 
-how things work, and some discussion on challenges.
+how things work, and some key points to notice.
 
 ## Installation
 1. Install Python
@@ -46,10 +46,15 @@ In folder /results/chrome, you could check details of the latest testing result 
 
 ## Things to notice
 
-###1. White list your tester IP in server administration 
+### 1. White list your tester IP in server administration 
    When running many automated tests, we may get blocked & blacklisted by server. In preparing this demo, I ran 
     into this issue, and my connections to ssense.com got terminated. I had to set up a seperate machine to
-    finish the tests. In real world testing automation, it is important to avoid unexpected disconnections.
+    finish the tests. 
        
-###2. Update browser driver 
+### 2. Update browser driver 
    Old browser driver would sometimes lead to unexpected errors.
+   
+### 3. Sometimes internal functions are necessary to support automated test cases
+   For example, sometimes events are driven by javascript and jquery, which automated browser 
+   could not track all the way through. Testers need to read source codes to determine which event to track. 
+   Building internal functions is a common way to help test automation to work around.
