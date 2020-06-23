@@ -52,9 +52,9 @@ In folder /results/chrome, you could check details of the latest testing result 
     finish the tests. 
     
    Also automated tests need to by pass security check pages like this:
-    ![SSense verification page](Sample-project/Search-in-Website/results/chrome/Security Check.png "Logo Title Text 1")
+    ![SSense verification page](https://github.com/galenchn/Robot-Framework-example/blob/master/Sample-project/Search-in-Website/results/chrome/SecurityCheck.png)
        
-       
+
 ### 2. Update browser driver 
    Old browser driver would sometimes lead to unexpected errors.
    
